@@ -8,10 +8,10 @@ public final class Messages {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  public interface TaskOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface TaskOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.Task)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string name = 1;
     /**
      * <code>required string name = 1;</code>
      */
@@ -26,7 +26,6 @@ public final class Messages {
     com.google.protobuf.ByteString
         getNameBytes();
 
-    // required .mesos.TaskID task_id = 2;
     /**
      * <code>required .mesos.TaskID task_id = 2;</code>
      */
@@ -40,7 +39,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.TaskIDOrBuilder getTaskIdOrBuilder();
 
-    // required .mesos.FrameworkID framework_id = 3;
     /**
      * <code>required .mesos.FrameworkID framework_id = 3;</code>
      */
@@ -54,7 +52,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // optional .mesos.ExecutorID executor_id = 4;
     /**
      * <code>optional .mesos.ExecutorID executor_id = 4;</code>
      */
@@ -68,7 +65,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.ExecutorIDOrBuilder getExecutorIdOrBuilder();
 
-    // required .mesos.SlaveID slave_id = 5;
     /**
      * <code>required .mesos.SlaveID slave_id = 5;</code>
      */
@@ -82,7 +78,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.TaskState state = 6;
     /**
      * <code>required .mesos.TaskState state = 6;</code>
      *
@@ -100,7 +95,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.TaskState getState();
 
-    // repeated .mesos.Resource resources = 7;
     /**
      * <code>repeated .mesos.Resource resources = 7;</code>
      */
@@ -125,7 +119,6 @@ public final class Messages {
     org.apache.mesos.Protos.ResourceOrBuilder getResourcesOrBuilder(
         int index);
 
-    // repeated .mesos.TaskStatus statuses = 8;
     /**
      * <code>repeated .mesos.TaskStatus statuses = 8;</code>
      */
@@ -150,7 +143,6 @@ public final class Messages {
     org.apache.mesos.Protos.TaskStatusOrBuilder getStatusesOrBuilder(
         int index);
 
-    // optional .mesos.TaskState status_update_state = 9;
     /**
      * <code>optional .mesos.TaskState status_update_state = 9;</code>
      *
@@ -172,7 +164,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.TaskState getStatusUpdateState();
 
-    // optional bytes status_update_uuid = 10;
     /**
      * <code>optional bytes status_update_uuid = 10;</code>
      */
@@ -200,8 +191,9 @@ public final class Messages {
    * </pre>
    */
   public static final class Task extends
-      com.google.protobuf.GeneratedMessage
-      implements TaskOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.Task)
+      TaskOrBuilder {
     // Use Task.newBuilder() to construct.
     private Task(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -248,8 +240,9 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              name_ = input.readBytes();
+              name_ = bs;
               break;
             }
             case 18: {
@@ -393,7 +386,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required string name = 1;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.Object name_;
     /**
@@ -436,7 +428,6 @@ public final class Messages {
       }
     }
 
-    // required .mesos.TaskID task_id = 2;
     public static final int TASK_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.TaskID taskId_;
     /**
@@ -458,7 +449,6 @@ public final class Messages {
       return taskId_;
     }
 
-    // required .mesos.FrameworkID framework_id = 3;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 3;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -480,7 +470,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // optional .mesos.ExecutorID executor_id = 4;
     public static final int EXECUTOR_ID_FIELD_NUMBER = 4;
     private org.apache.mesos.Protos.ExecutorID executorId_;
     /**
@@ -502,7 +491,6 @@ public final class Messages {
       return executorId_;
     }
 
-    // required .mesos.SlaveID slave_id = 5;
     public static final int SLAVE_ID_FIELD_NUMBER = 5;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -524,7 +512,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.TaskState state = 6;
     public static final int STATE_FIELD_NUMBER = 6;
     private org.apache.mesos.Protos.TaskState state_;
     /**
@@ -548,7 +535,6 @@ public final class Messages {
       return state_;
     }
 
-    // repeated .mesos.Resource resources = 7;
     public static final int RESOURCES_FIELD_NUMBER = 7;
     private java.util.List<org.apache.mesos.Protos.Resource> resources_;
     /**
@@ -584,7 +570,6 @@ public final class Messages {
       return resources_.get(index);
     }
 
-    // repeated .mesos.TaskStatus statuses = 8;
     public static final int STATUSES_FIELD_NUMBER = 8;
     private java.util.List<org.apache.mesos.Protos.TaskStatus> statuses_;
     /**
@@ -620,7 +605,6 @@ public final class Messages {
       return statuses_.get(index);
     }
 
-    // optional .mesos.TaskState status_update_state = 9;
     public static final int STATUS_UPDATE_STATE_FIELD_NUMBER = 9;
     private org.apache.mesos.Protos.TaskState statusUpdateState_;
     /**
@@ -648,7 +632,6 @@ public final class Messages {
       return statusUpdateState_;
     }
 
-    // optional bytes status_update_uuid = 10;
     public static final int STATUS_UPDATE_UUID_FIELD_NUMBER = 10;
     private com.google.protobuf.ByteString statusUpdateUuid_;
     /**
@@ -679,7 +662,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasName()) {
         memoizedIsInitialized = 0;
@@ -913,8 +897,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.TaskOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.Task)
+        mesos.internal.Messages.TaskOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_Task_descriptor;
@@ -1262,7 +1247,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required string name = 1;
       private java.lang.Object name_ = "";
       /**
        * <code>required string name = 1;</code>
@@ -1276,9 +1260,12 @@ public final class Messages {
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          name_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -1336,7 +1323,6 @@ public final class Messages {
         return this;
       }
 
-      // required .mesos.TaskID task_id = 2;
       private org.apache.mesos.Protos.TaskID taskId_ = org.apache.mesos.Protos.TaskID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder> taskIdBuilder_;
@@ -1445,7 +1431,7 @@ public final class Messages {
         if (taskIdBuilder_ == null) {
           taskIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder>(
-                  taskId_,
+                  getTaskId(),
                   getParentForChildren(),
                   isClean());
           taskId_ = null;
@@ -1453,7 +1439,6 @@ public final class Messages {
         return taskIdBuilder_;
       }
 
-      // required .mesos.FrameworkID framework_id = 3;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -1562,7 +1547,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -1570,7 +1555,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // optional .mesos.ExecutorID executor_id = 4;
       private org.apache.mesos.Protos.ExecutorID executorId_ = org.apache.mesos.Protos.ExecutorID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder> executorIdBuilder_;
@@ -1679,7 +1663,7 @@ public final class Messages {
         if (executorIdBuilder_ == null) {
           executorIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder>(
-                  executorId_,
+                  getExecutorId(),
                   getParentForChildren(),
                   isClean());
           executorId_ = null;
@@ -1687,7 +1671,6 @@ public final class Messages {
         return executorIdBuilder_;
       }
 
-      // required .mesos.SlaveID slave_id = 5;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -1796,7 +1779,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -1804,7 +1787,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.TaskState state = 6;
       private org.apache.mesos.Protos.TaskState state_ = org.apache.mesos.Protos.TaskState.TASK_STAGING;
       /**
        * <code>required .mesos.TaskState state = 6;</code>
@@ -1856,7 +1838,6 @@ public final class Messages {
         return this;
       }
 
-      // repeated .mesos.Resource resources = 7;
       private java.util.List<org.apache.mesos.Protos.Resource> resources_ =
         java.util.Collections.emptyList();
       private void ensureResourcesIsMutable() {
@@ -1998,7 +1979,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.Resource> values) {
         if (resourcesBuilder_ == null) {
           ensureResourcesIsMutable();
-          super.addAll(values, resources_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, resources_);
           onChanged();
         } else {
           resourcesBuilder_.addAllMessages(values);
@@ -2096,7 +2078,6 @@ public final class Messages {
         return resourcesBuilder_;
       }
 
-      // repeated .mesos.TaskStatus statuses = 8;
       private java.util.List<org.apache.mesos.Protos.TaskStatus> statuses_ =
         java.util.Collections.emptyList();
       private void ensureStatusesIsMutable() {
@@ -2238,7 +2219,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.TaskStatus> values) {
         if (statusesBuilder_ == null) {
           ensureStatusesIsMutable();
-          super.addAll(values, statuses_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, statuses_);
           onChanged();
         } else {
           statusesBuilder_.addAllMessages(values);
@@ -2336,7 +2318,6 @@ public final class Messages {
         return statusesBuilder_;
       }
 
-      // optional .mesos.TaskState status_update_state = 9;
       private org.apache.mesos.Protos.TaskState statusUpdateState_ = org.apache.mesos.Protos.TaskState.TASK_STAGING;
       /**
        * <code>optional .mesos.TaskState status_update_state = 9;</code>
@@ -2396,7 +2377,6 @@ public final class Messages {
         return this;
       }
 
-      // optional bytes status_update_uuid = 10;
       private com.google.protobuf.ByteString statusUpdateUuid_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes status_update_uuid = 10;</code>
@@ -2443,10 +2423,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.Task)
   }
 
-  public interface RoleInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RoleInfoOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.RoleInfo)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string name = 1;
     /**
      * <code>required string name = 1;</code>
      */
@@ -2461,7 +2441,6 @@ public final class Messages {
     com.google.protobuf.ByteString
         getNameBytes();
 
-    // optional double weight = 2 [default = 1];
     /**
      * <code>optional double weight = 2 [default = 1];</code>
      */
@@ -2481,8 +2460,9 @@ public final class Messages {
    * </pre>
    */
   public static final class RoleInfo extends
-      com.google.protobuf.GeneratedMessage
-      implements RoleInfoOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.RoleInfo)
+      RoleInfoOrBuilder {
     // Use RoleInfo.newBuilder() to construct.
     private RoleInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -2529,8 +2509,9 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              name_ = input.readBytes();
+              name_ = bs;
               break;
             }
             case 17: {
@@ -2578,7 +2559,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required string name = 1;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.Object name_;
     /**
@@ -2621,7 +2601,6 @@ public final class Messages {
       }
     }
 
-    // optional double weight = 2 [default = 1];
     public static final int WEIGHT_FIELD_NUMBER = 2;
     private double weight_;
     /**
@@ -2644,7 +2623,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasName()) {
         memoizedIsInitialized = 0;
@@ -2768,8 +2748,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.RoleInfoOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.RoleInfo)
+        mesos.internal.Messages.RoleInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_RoleInfo_descriptor;
@@ -2897,7 +2878,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required string name = 1;
       private java.lang.Object name_ = "";
       /**
        * <code>required string name = 1;</code>
@@ -2911,9 +2891,12 @@ public final class Messages {
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          name_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -2971,7 +2954,6 @@ public final class Messages {
         return this;
       }
 
-      // optional double weight = 2 [default = 1];
       private double weight_ = 1D;
       /**
        * <code>optional double weight = 2 [default = 1];</code>
@@ -3015,10 +2997,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.RoleInfo)
   }
 
-  public interface StatusUpdateOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface StatusUpdateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.StatusUpdate)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -3032,7 +3014,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // optional .mesos.ExecutorID executor_id = 2;
     /**
      * <code>optional .mesos.ExecutorID executor_id = 2;</code>
      */
@@ -3046,7 +3027,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.ExecutorIDOrBuilder getExecutorIdOrBuilder();
 
-    // optional .mesos.SlaveID slave_id = 3;
     /**
      * <code>optional .mesos.SlaveID slave_id = 3;</code>
      */
@@ -3060,7 +3040,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.TaskStatus status = 4;
     /**
      * <code>required .mesos.TaskStatus status = 4;</code>
      */
@@ -3074,7 +3053,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.TaskStatusOrBuilder getStatusOrBuilder();
 
-    // required double timestamp = 5;
     /**
      * <code>required double timestamp = 5;</code>
      */
@@ -3084,7 +3062,6 @@ public final class Messages {
      */
     double getTimestamp();
 
-    // required bytes uuid = 6;
     /**
      * <code>required bytes uuid = 6;</code>
      */
@@ -3094,7 +3071,6 @@ public final class Messages {
      */
     com.google.protobuf.ByteString getUuid();
 
-    // optional .mesos.TaskState latest_state = 7;
     /**
      * <code>optional .mesos.TaskState latest_state = 7;</code>
      *
@@ -3128,8 +3104,9 @@ public final class Messages {
    * </pre>
    */
   public static final class StatusUpdate extends
-      com.google.protobuf.GeneratedMessage
-      implements StatusUpdateOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.StatusUpdate)
+      StatusUpdateOrBuilder {
     // Use StatusUpdate.newBuilder() to construct.
     private StatusUpdate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -3288,7 +3265,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -3310,7 +3286,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // optional .mesos.ExecutorID executor_id = 2;
     public static final int EXECUTOR_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.ExecutorID executorId_;
     /**
@@ -3332,7 +3307,6 @@ public final class Messages {
       return executorId_;
     }
 
-    // optional .mesos.SlaveID slave_id = 3;
     public static final int SLAVE_ID_FIELD_NUMBER = 3;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -3354,7 +3328,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.TaskStatus status = 4;
     public static final int STATUS_FIELD_NUMBER = 4;
     private org.apache.mesos.Protos.TaskStatus status_;
     /**
@@ -3376,7 +3349,6 @@ public final class Messages {
       return status_;
     }
 
-    // required double timestamp = 5;
     public static final int TIMESTAMP_FIELD_NUMBER = 5;
     private double timestamp_;
     /**
@@ -3392,7 +3364,6 @@ public final class Messages {
       return timestamp_;
     }
 
-    // required bytes uuid = 6;
     public static final int UUID_FIELD_NUMBER = 6;
     private com.google.protobuf.ByteString uuid_;
     /**
@@ -3408,7 +3379,6 @@ public final class Messages {
       return uuid_;
     }
 
-    // optional .mesos.TaskState latest_state = 7;
     public static final int LATEST_STATE_FIELD_NUMBER = 7;
     private org.apache.mesos.Protos.TaskState latestState_;
     /**
@@ -3452,7 +3422,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -3641,8 +3612,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.StatusUpdateOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.StatusUpdate)
+        mesos.internal.Messages.StatusUpdateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_StatusUpdate_descriptor;
@@ -3881,7 +3853,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -3990,7 +3961,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -3998,7 +3969,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // optional .mesos.ExecutorID executor_id = 2;
       private org.apache.mesos.Protos.ExecutorID executorId_ = org.apache.mesos.Protos.ExecutorID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder> executorIdBuilder_;
@@ -4107,7 +4077,7 @@ public final class Messages {
         if (executorIdBuilder_ == null) {
           executorIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder>(
-                  executorId_,
+                  getExecutorId(),
                   getParentForChildren(),
                   isClean());
           executorId_ = null;
@@ -4115,7 +4085,6 @@ public final class Messages {
         return executorIdBuilder_;
       }
 
-      // optional .mesos.SlaveID slave_id = 3;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -4224,7 +4193,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -4232,7 +4201,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.TaskStatus status = 4;
       private org.apache.mesos.Protos.TaskStatus status_ = org.apache.mesos.Protos.TaskStatus.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.TaskStatus, org.apache.mesos.Protos.TaskStatus.Builder, org.apache.mesos.Protos.TaskStatusOrBuilder> statusBuilder_;
@@ -4341,7 +4309,7 @@ public final class Messages {
         if (statusBuilder_ == null) {
           statusBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.TaskStatus, org.apache.mesos.Protos.TaskStatus.Builder, org.apache.mesos.Protos.TaskStatusOrBuilder>(
-                  status_,
+                  getStatus(),
                   getParentForChildren(),
                   isClean());
           status_ = null;
@@ -4349,7 +4317,6 @@ public final class Messages {
         return statusBuilder_;
       }
 
-      // required double timestamp = 5;
       private double timestamp_ ;
       /**
        * <code>required double timestamp = 5;</code>
@@ -4382,7 +4349,6 @@ public final class Messages {
         return this;
       }
 
-      // required bytes uuid = 6;
       private com.google.protobuf.ByteString uuid_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes uuid = 6;</code>
@@ -4418,7 +4384,6 @@ public final class Messages {
         return this;
       }
 
-      // optional .mesos.TaskState latest_state = 7;
       private org.apache.mesos.Protos.TaskState latestState_ = org.apache.mesos.Protos.TaskState.TASK_STAGING;
       /**
        * <code>optional .mesos.TaskState latest_state = 7;</code>
@@ -4497,10 +4462,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.StatusUpdate)
   }
 
-  public interface StatusUpdateRecordOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface StatusUpdateRecordOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.StatusUpdateRecord)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.internal.StatusUpdateRecord.Type type = 1;
     /**
      * <code>required .mesos.internal.StatusUpdateRecord.Type type = 1;</code>
      */
@@ -4510,7 +4475,6 @@ public final class Messages {
      */
     mesos.internal.Messages.StatusUpdateRecord.Type getType();
 
-    // optional .mesos.internal.StatusUpdate update = 2;
     /**
      * <code>optional .mesos.internal.StatusUpdate update = 2;</code>
      */
@@ -4524,7 +4488,6 @@ public final class Messages {
      */
     mesos.internal.Messages.StatusUpdateOrBuilder getUpdateOrBuilder();
 
-    // optional bytes uuid = 3;
     /**
      * <code>optional bytes uuid = 3;</code>
      */
@@ -4544,8 +4507,9 @@ public final class Messages {
    * </pre>
    */
   public static final class StatusUpdateRecord extends
-      com.google.protobuf.GeneratedMessage
-      implements StatusUpdateRecordOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.StatusUpdateRecord)
+      StatusUpdateRecordOrBuilder {
     // Use StatusUpdateRecord.newBuilder() to construct.
     private StatusUpdateRecord(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -4742,7 +4706,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.internal.StatusUpdateRecord.Type type = 1;
     public static final int TYPE_FIELD_NUMBER = 1;
     private mesos.internal.Messages.StatusUpdateRecord.Type type_;
     /**
@@ -4758,7 +4721,6 @@ public final class Messages {
       return type_;
     }
 
-    // optional .mesos.internal.StatusUpdate update = 2;
     public static final int UPDATE_FIELD_NUMBER = 2;
     private mesos.internal.Messages.StatusUpdate update_;
     /**
@@ -4780,7 +4742,6 @@ public final class Messages {
       return update_;
     }
 
-    // optional bytes uuid = 3;
     public static final int UUID_FIELD_NUMBER = 3;
     private com.google.protobuf.ByteString uuid_;
     /**
@@ -4804,7 +4765,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasType()) {
         memoizedIsInitialized = 0;
@@ -4941,8 +4903,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.StatusUpdateRecordOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.StatusUpdateRecord)
+        mesos.internal.Messages.StatusUpdateRecordOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_StatusUpdateRecord_descriptor;
@@ -5092,7 +5055,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.internal.StatusUpdateRecord.Type type = 1;
       private mesos.internal.Messages.StatusUpdateRecord.Type type_ = mesos.internal.Messages.StatusUpdateRecord.Type.UPDATE;
       /**
        * <code>required .mesos.internal.StatusUpdateRecord.Type type = 1;</code>
@@ -5128,7 +5090,6 @@ public final class Messages {
         return this;
       }
 
-      // optional .mesos.internal.StatusUpdate update = 2;
       private mesos.internal.Messages.StatusUpdate update_ = mesos.internal.Messages.StatusUpdate.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           mesos.internal.Messages.StatusUpdate, mesos.internal.Messages.StatusUpdate.Builder, mesos.internal.Messages.StatusUpdateOrBuilder> updateBuilder_;
@@ -5237,7 +5198,7 @@ public final class Messages {
         if (updateBuilder_ == null) {
           updateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               mesos.internal.Messages.StatusUpdate, mesos.internal.Messages.StatusUpdate.Builder, mesos.internal.Messages.StatusUpdateOrBuilder>(
-                  update_,
+                  getUpdate(),
                   getParentForChildren(),
                   isClean());
           update_ = null;
@@ -5245,7 +5206,6 @@ public final class Messages {
         return updateBuilder_;
       }
 
-      // optional bytes uuid = 3;
       private com.google.protobuf.ByteString uuid_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes uuid = 3;</code>
@@ -5292,10 +5252,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.StatusUpdateRecord)
   }
 
-  public interface SubmitSchedulerRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SubmitSchedulerRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.SubmitSchedulerRequest)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string name = 1;
     /**
      * <code>required string name = 1;</code>
      */
@@ -5314,8 +5274,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.SubmitSchedulerRequest}
    */
   public static final class SubmitSchedulerRequest extends
-      com.google.protobuf.GeneratedMessage
-      implements SubmitSchedulerRequestOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.SubmitSchedulerRequest)
+      SubmitSchedulerRequestOrBuilder {
     // Use SubmitSchedulerRequest.newBuilder() to construct.
     private SubmitSchedulerRequest(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -5362,8 +5323,9 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              name_ = input.readBytes();
+              name_ = bs;
               break;
             }
           }
@@ -5406,7 +5368,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required string name = 1;
     public static final int NAME_FIELD_NUMBER = 1;
     private java.lang.Object name_;
     /**
@@ -5455,7 +5416,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasName()) {
         memoizedIsInitialized = 0;
@@ -5566,8 +5528,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.SubmitSchedulerRequest}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.SubmitSchedulerRequestOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.SubmitSchedulerRequest)
+        mesos.internal.Messages.SubmitSchedulerRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_SubmitSchedulerRequest_descriptor;
@@ -5686,7 +5649,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required string name = 1;
       private java.lang.Object name_ = "";
       /**
        * <code>required string name = 1;</code>
@@ -5700,9 +5662,12 @@ public final class Messages {
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          name_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            name_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -5771,10 +5736,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.SubmitSchedulerRequest)
   }
 
-  public interface SubmitSchedulerResponseOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SubmitSchedulerResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.SubmitSchedulerResponse)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required bool okay = 1;
     /**
      * <code>required bool okay = 1;</code>
      */
@@ -5788,8 +5753,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.SubmitSchedulerResponse}
    */
   public static final class SubmitSchedulerResponse extends
-      com.google.protobuf.GeneratedMessage
-      implements SubmitSchedulerResponseOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.SubmitSchedulerResponse)
+      SubmitSchedulerResponseOrBuilder {
     // Use SubmitSchedulerResponse.newBuilder() to construct.
     private SubmitSchedulerResponse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -5880,7 +5846,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required bool okay = 1;
     public static final int OKAY_FIELD_NUMBER = 1;
     private boolean okay_;
     /**
@@ -5902,7 +5867,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasOkay()) {
         memoizedIsInitialized = 0;
@@ -6013,8 +5979,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.SubmitSchedulerResponse}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.SubmitSchedulerResponseOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.SubmitSchedulerResponse)
+        mesos.internal.Messages.SubmitSchedulerResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_SubmitSchedulerResponse_descriptor;
@@ -6131,7 +6098,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required bool okay = 1;
       private boolean okay_ ;
       /**
        * <code>required bool okay = 1;</code>
@@ -6175,10 +6141,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.SubmitSchedulerResponse)
   }
 
-  public interface ExecutorToFrameworkMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ExecutorToFrameworkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ExecutorToFrameworkMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -6192,7 +6158,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.FrameworkID framework_id = 2;
     /**
      * <code>required .mesos.FrameworkID framework_id = 2;</code>
      */
@@ -6206,7 +6171,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.ExecutorID executor_id = 3;
     /**
      * <code>required .mesos.ExecutorID executor_id = 3;</code>
      */
@@ -6220,7 +6184,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.ExecutorIDOrBuilder getExecutorIdOrBuilder();
 
-    // required bytes data = 4;
     /**
      * <code>required bytes data = 4;</code>
      */
@@ -6234,8 +6197,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ExecutorToFrameworkMessage}
    */
   public static final class ExecutorToFrameworkMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ExecutorToFrameworkMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ExecutorToFrameworkMessage)
+      ExecutorToFrameworkMessageOrBuilder {
     // Use ExecutorToFrameworkMessage.newBuilder() to construct.
     private ExecutorToFrameworkMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -6365,7 +6329,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -6387,7 +6350,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.FrameworkID framework_id = 2;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -6409,7 +6371,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.ExecutorID executor_id = 3;
     public static final int EXECUTOR_ID_FIELD_NUMBER = 3;
     private org.apache.mesos.Protos.ExecutorID executorId_;
     /**
@@ -6431,7 +6392,6 @@ public final class Messages {
       return executorId_;
     }
 
-    // required bytes data = 4;
     public static final int DATA_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString data_;
     /**
@@ -6456,7 +6416,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -6612,8 +6573,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ExecutorToFrameworkMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ExecutorToFrameworkMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ExecutorToFrameworkMessage)
+        mesos.internal.Messages.ExecutorToFrameworkMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ExecutorToFrameworkMessage_descriptor;
@@ -6808,7 +6770,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -6917,7 +6878,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -6925,7 +6886,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.FrameworkID framework_id = 2;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -7034,7 +6994,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -7042,7 +7002,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.ExecutorID executor_id = 3;
       private org.apache.mesos.Protos.ExecutorID executorId_ = org.apache.mesos.Protos.ExecutorID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder> executorIdBuilder_;
@@ -7151,7 +7110,7 @@ public final class Messages {
         if (executorIdBuilder_ == null) {
           executorIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder>(
-                  executorId_,
+                  getExecutorId(),
                   getParentForChildren(),
                   isClean());
           executorId_ = null;
@@ -7159,7 +7118,6 @@ public final class Messages {
         return executorIdBuilder_;
       }
 
-      // required bytes data = 4;
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes data = 4;</code>
@@ -7206,10 +7164,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ExecutorToFrameworkMessage)
   }
 
-  public interface FrameworkToExecutorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface FrameworkToExecutorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.FrameworkToExecutorMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -7223,7 +7181,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.FrameworkID framework_id = 2;
     /**
      * <code>required .mesos.FrameworkID framework_id = 2;</code>
      */
@@ -7237,7 +7194,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.ExecutorID executor_id = 3;
     /**
      * <code>required .mesos.ExecutorID executor_id = 3;</code>
      */
@@ -7251,7 +7207,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.ExecutorIDOrBuilder getExecutorIdOrBuilder();
 
-    // required bytes data = 4;
     /**
      * <code>required bytes data = 4;</code>
      */
@@ -7265,8 +7220,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.FrameworkToExecutorMessage}
    */
   public static final class FrameworkToExecutorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements FrameworkToExecutorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.FrameworkToExecutorMessage)
+      FrameworkToExecutorMessageOrBuilder {
     // Use FrameworkToExecutorMessage.newBuilder() to construct.
     private FrameworkToExecutorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -7396,7 +7352,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -7418,7 +7373,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.FrameworkID framework_id = 2;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -7440,7 +7394,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.ExecutorID executor_id = 3;
     public static final int EXECUTOR_ID_FIELD_NUMBER = 3;
     private org.apache.mesos.Protos.ExecutorID executorId_;
     /**
@@ -7462,7 +7415,6 @@ public final class Messages {
       return executorId_;
     }
 
-    // required bytes data = 4;
     public static final int DATA_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString data_;
     /**
@@ -7487,7 +7439,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -7643,8 +7596,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.FrameworkToExecutorMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.FrameworkToExecutorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.FrameworkToExecutorMessage)
+        mesos.internal.Messages.FrameworkToExecutorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_FrameworkToExecutorMessage_descriptor;
@@ -7839,7 +7793,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -7948,7 +7901,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -7956,7 +7909,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.FrameworkID framework_id = 2;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -8065,7 +8017,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -8073,7 +8025,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.ExecutorID executor_id = 3;
       private org.apache.mesos.Protos.ExecutorID executorId_ = org.apache.mesos.Protos.ExecutorID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder> executorIdBuilder_;
@@ -8182,7 +8133,7 @@ public final class Messages {
         if (executorIdBuilder_ == null) {
           executorIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder>(
-                  executorId_,
+                  getExecutorId(),
                   getParentForChildren(),
                   isClean());
           executorId_ = null;
@@ -8190,7 +8141,6 @@ public final class Messages {
         return executorIdBuilder_;
       }
 
-      // required bytes data = 4;
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes data = 4;</code>
@@ -8237,10 +8187,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.FrameworkToExecutorMessage)
   }
 
-  public interface RegisterFrameworkMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RegisterFrameworkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.RegisterFrameworkMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkInfo framework = 1;
     /**
      * <code>required .mesos.FrameworkInfo framework = 1;</code>
      */
@@ -8258,8 +8208,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.RegisterFrameworkMessage}
    */
   public static final class RegisterFrameworkMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements RegisterFrameworkMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.RegisterFrameworkMessage)
+      RegisterFrameworkMessageOrBuilder {
     // Use RegisterFrameworkMessage.newBuilder() to construct.
     private RegisterFrameworkMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -8358,7 +8309,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkInfo framework = 1;
     public static final int FRAMEWORK_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkInfo framework_;
     /**
@@ -8386,7 +8336,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFramework()) {
         memoizedIsInitialized = 0;
@@ -8501,8 +8452,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.RegisterFrameworkMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.RegisterFrameworkMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.RegisterFrameworkMessage)
+        mesos.internal.Messages.RegisterFrameworkMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_RegisterFrameworkMessage_descriptor;
@@ -8632,7 +8584,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkInfo framework = 1;
       private org.apache.mesos.Protos.FrameworkInfo framework_ = org.apache.mesos.Protos.FrameworkInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder> frameworkBuilder_;
@@ -8741,7 +8692,7 @@ public final class Messages {
         if (frameworkBuilder_ == null) {
           frameworkBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder>(
-                  framework_,
+                  getFramework(),
                   getParentForChildren(),
                   isClean());
           framework_ = null;
@@ -8760,10 +8711,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.RegisterFrameworkMessage)
   }
 
-  public interface ReregisterFrameworkMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ReregisterFrameworkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ReregisterFrameworkMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkInfo framework = 2;
     /**
      * <code>required .mesos.FrameworkInfo framework = 2;</code>
      */
@@ -8777,7 +8728,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkInfoOrBuilder getFrameworkOrBuilder();
 
-    // required bool failover = 3;
     /**
      * <code>required bool failover = 3;</code>
      */
@@ -8791,8 +8741,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ReregisterFrameworkMessage}
    */
   public static final class ReregisterFrameworkMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ReregisterFrameworkMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ReregisterFrameworkMessage)
+      ReregisterFrameworkMessageOrBuilder {
     // Use ReregisterFrameworkMessage.newBuilder() to construct.
     private ReregisterFrameworkMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -8896,7 +8847,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkInfo framework = 2;
     public static final int FRAMEWORK_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.FrameworkInfo framework_;
     /**
@@ -8918,7 +8868,6 @@ public final class Messages {
       return framework_;
     }
 
-    // required bool failover = 3;
     public static final int FAILOVER_FIELD_NUMBER = 3;
     private boolean failover_;
     /**
@@ -8941,7 +8890,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFramework()) {
         memoizedIsInitialized = 0;
@@ -9067,8 +9017,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ReregisterFrameworkMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ReregisterFrameworkMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ReregisterFrameworkMessage)
+        mesos.internal.Messages.ReregisterFrameworkMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ReregisterFrameworkMessage_descriptor;
@@ -9211,7 +9162,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkInfo framework = 2;
       private org.apache.mesos.Protos.FrameworkInfo framework_ = org.apache.mesos.Protos.FrameworkInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder> frameworkBuilder_;
@@ -9320,7 +9270,7 @@ public final class Messages {
         if (frameworkBuilder_ == null) {
           frameworkBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder>(
-                  framework_,
+                  getFramework(),
                   getParentForChildren(),
                   isClean());
           framework_ = null;
@@ -9328,7 +9278,6 @@ public final class Messages {
         return frameworkBuilder_;
       }
 
-      // required bool failover = 3;
       private boolean failover_ ;
       /**
        * <code>required bool failover = 3;</code>
@@ -9372,10 +9321,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ReregisterFrameworkMessage)
   }
 
-  public interface FrameworkRegisteredMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface FrameworkRegisteredMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.FrameworkRegisteredMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -9389,7 +9338,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.MasterInfo master_info = 2;
     /**
      * <code>required .mesos.MasterInfo master_info = 2;</code>
      */
@@ -9407,8 +9355,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.FrameworkRegisteredMessage}
    */
   public static final class FrameworkRegisteredMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements FrameworkRegisteredMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.FrameworkRegisteredMessage)
+      FrameworkRegisteredMessageOrBuilder {
     // Use FrameworkRegisteredMessage.newBuilder() to construct.
     private FrameworkRegisteredMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -9520,7 +9469,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -9542,7 +9490,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.MasterInfo master_info = 2;
     public static final int MASTER_INFO_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.MasterInfo masterInfo_;
     /**
@@ -9571,7 +9518,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -9701,8 +9649,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.FrameworkRegisteredMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.FrameworkRegisteredMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.FrameworkRegisteredMessage)
+        mesos.internal.Messages.FrameworkRegisteredMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_FrameworkRegisteredMessage_descriptor;
@@ -9858,7 +9807,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -9967,7 +9915,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -9975,7 +9923,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.MasterInfo master_info = 2;
       private org.apache.mesos.Protos.MasterInfo masterInfo_ = org.apache.mesos.Protos.MasterInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.MasterInfo, org.apache.mesos.Protos.MasterInfo.Builder, org.apache.mesos.Protos.MasterInfoOrBuilder> masterInfoBuilder_;
@@ -10084,7 +10031,7 @@ public final class Messages {
         if (masterInfoBuilder_ == null) {
           masterInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.MasterInfo, org.apache.mesos.Protos.MasterInfo.Builder, org.apache.mesos.Protos.MasterInfoOrBuilder>(
-                  masterInfo_,
+                  getMasterInfo(),
                   getParentForChildren(),
                   isClean());
           masterInfo_ = null;
@@ -10103,10 +10050,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.FrameworkRegisteredMessage)
   }
 
-  public interface FrameworkReregisteredMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface FrameworkReregisteredMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.FrameworkReregisteredMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -10120,7 +10067,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.MasterInfo master_info = 2;
     /**
      * <code>required .mesos.MasterInfo master_info = 2;</code>
      */
@@ -10138,8 +10084,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.FrameworkReregisteredMessage}
    */
   public static final class FrameworkReregisteredMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements FrameworkReregisteredMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.FrameworkReregisteredMessage)
+      FrameworkReregisteredMessageOrBuilder {
     // Use FrameworkReregisteredMessage.newBuilder() to construct.
     private FrameworkReregisteredMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -10251,7 +10198,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -10273,7 +10219,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.MasterInfo master_info = 2;
     public static final int MASTER_INFO_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.MasterInfo masterInfo_;
     /**
@@ -10302,7 +10247,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -10432,8 +10378,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.FrameworkReregisteredMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.FrameworkReregisteredMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.FrameworkReregisteredMessage)
+        mesos.internal.Messages.FrameworkReregisteredMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_FrameworkReregisteredMessage_descriptor;
@@ -10589,7 +10536,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -10698,7 +10644,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -10706,7 +10652,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.MasterInfo master_info = 2;
       private org.apache.mesos.Protos.MasterInfo masterInfo_ = org.apache.mesos.Protos.MasterInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.MasterInfo, org.apache.mesos.Protos.MasterInfo.Builder, org.apache.mesos.Protos.MasterInfoOrBuilder> masterInfoBuilder_;
@@ -10815,7 +10760,7 @@ public final class Messages {
         if (masterInfoBuilder_ == null) {
           masterInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.MasterInfo, org.apache.mesos.Protos.MasterInfo.Builder, org.apache.mesos.Protos.MasterInfoOrBuilder>(
-                  masterInfo_,
+                  getMasterInfo(),
                   getParentForChildren(),
                   isClean());
           masterInfo_ = null;
@@ -10834,10 +10779,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.FrameworkReregisteredMessage)
   }
 
-  public interface UnregisterFrameworkMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface UnregisterFrameworkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.UnregisterFrameworkMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -10855,8 +10800,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.UnregisterFrameworkMessage}
    */
   public static final class UnregisterFrameworkMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements UnregisterFrameworkMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.UnregisterFrameworkMessage)
+      UnregisterFrameworkMessageOrBuilder {
     // Use UnregisterFrameworkMessage.newBuilder() to construct.
     private UnregisterFrameworkMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -10955,7 +10901,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -10983,7 +10928,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -11098,8 +11044,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.UnregisterFrameworkMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.UnregisterFrameworkMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.UnregisterFrameworkMessage)
+        mesos.internal.Messages.UnregisterFrameworkMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_UnregisterFrameworkMessage_descriptor;
@@ -11229,7 +11176,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -11338,7 +11284,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -11357,10 +11303,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.UnregisterFrameworkMessage)
   }
 
-  public interface DeactivateFrameworkMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface DeactivateFrameworkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.DeactivateFrameworkMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -11378,8 +11324,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.DeactivateFrameworkMessage}
    */
   public static final class DeactivateFrameworkMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements DeactivateFrameworkMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.DeactivateFrameworkMessage)
+      DeactivateFrameworkMessageOrBuilder {
     // Use DeactivateFrameworkMessage.newBuilder() to construct.
     private DeactivateFrameworkMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -11478,7 +11425,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -11506,7 +11452,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -11621,8 +11568,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.DeactivateFrameworkMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.DeactivateFrameworkMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.DeactivateFrameworkMessage)
+        mesos.internal.Messages.DeactivateFrameworkMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_DeactivateFrameworkMessage_descriptor;
@@ -11752,7 +11700,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -11861,7 +11808,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -11880,10 +11827,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.DeactivateFrameworkMessage)
   }
 
-  public interface ResourceRequestMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ResourceRequestMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ResourceRequestMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -11897,7 +11844,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // repeated .mesos.Request requests = 2;
     /**
      * <code>repeated .mesos.Request requests = 2;</code>
      */
@@ -11926,8 +11872,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ResourceRequestMessage}
    */
   public static final class ResourceRequestMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ResourceRequestMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ResourceRequestMessage)
+      ResourceRequestMessageOrBuilder {
     // Use ResourceRequestMessage.newBuilder() to construct.
     private ResourceRequestMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -12037,7 +11984,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -12059,7 +12005,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // repeated .mesos.Request requests = 2;
     public static final int REQUESTS_FIELD_NUMBER = 2;
     private java.util.List<org.apache.mesos.Protos.Request> requests_;
     /**
@@ -12102,7 +12047,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -12230,8 +12176,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ResourceRequestMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ResourceRequestMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ResourceRequestMessage)
+        mesos.internal.Messages.ResourceRequestMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ResourceRequestMessage_descriptor;
@@ -12409,7 +12356,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -12518,7 +12464,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -12526,7 +12472,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // repeated .mesos.Request requests = 2;
       private java.util.List<org.apache.mesos.Protos.Request> requests_ =
         java.util.Collections.emptyList();
       private void ensureRequestsIsMutable() {
@@ -12668,7 +12613,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.Request> values) {
         if (requestsBuilder_ == null) {
           ensureRequestsIsMutable();
-          super.addAll(values, requests_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, requests_);
           onChanged();
         } else {
           requestsBuilder_.addAllMessages(values);
@@ -12777,10 +12723,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ResourceRequestMessage)
   }
 
-  public interface ResourceOffersMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ResourceOffersMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ResourceOffersMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // repeated .mesos.Offer offers = 1;
     /**
      * <code>repeated .mesos.Offer offers = 1;</code>
      */
@@ -12805,12 +12751,11 @@ public final class Messages {
     org.apache.mesos.Protos.OfferOrBuilder getOffersOrBuilder(
         int index);
 
-    // repeated string pids = 2;
     /**
      * <code>repeated string pids = 2;</code>
      */
-    java.util.List<java.lang.String>
-    getPidsList();
+    com.google.protobuf.ProtocolStringList
+        getPidsList();
     /**
      * <code>repeated string pids = 2;</code>
      */
@@ -12829,8 +12774,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ResourceOffersMessage}
    */
   public static final class ResourceOffersMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ResourceOffersMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ResourceOffersMessage)
+      ResourceOffersMessageOrBuilder {
     // Use ResourceOffersMessage.newBuilder() to construct.
     private ResourceOffersMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -12885,11 +12831,12 @@ public final class Messages {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 pids_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000002;
               }
-              pids_.add(input.readBytes());
+              pids_.add(bs);
               break;
             }
           }
@@ -12904,7 +12851,7 @@ public final class Messages {
           offers_ = java.util.Collections.unmodifiableList(offers_);
         }
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-          pids_ = new com.google.protobuf.UnmodifiableLazyStringList(pids_);
+          pids_ = pids_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -12937,7 +12884,6 @@ public final class Messages {
       return PARSER;
     }
 
-    // repeated .mesos.Offer offers = 1;
     public static final int OFFERS_FIELD_NUMBER = 1;
     private java.util.List<org.apache.mesos.Protos.Offer> offers_;
     /**
@@ -12973,13 +12919,12 @@ public final class Messages {
       return offers_.get(index);
     }
 
-    // repeated string pids = 2;
     public static final int PIDS_FIELD_NUMBER = 2;
     private com.google.protobuf.LazyStringList pids_;
     /**
      * <code>repeated string pids = 2;</code>
      */
-    public java.util.List<java.lang.String>
+    public com.google.protobuf.ProtocolStringList
         getPidsList() {
       return pids_;
     }
@@ -13010,7 +12955,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       for (int i = 0; i < getOffersCount(); i++) {
         if (!getOffers(i).isInitialized()) {
@@ -13135,8 +13081,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ResourceOffersMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ResourceOffersMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ResourceOffersMessage)
+        mesos.internal.Messages.ResourceOffersMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ResourceOffersMessage_descriptor;
@@ -13215,8 +13162,7 @@ public final class Messages {
           result.offers_ = offersBuilder_.build();
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          pids_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              pids_);
+          pids_ = pids_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.pids_ = pids_;
@@ -13304,7 +13250,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // repeated .mesos.Offer offers = 1;
       private java.util.List<org.apache.mesos.Protos.Offer> offers_ =
         java.util.Collections.emptyList();
       private void ensureOffersIsMutable() {
@@ -13446,7 +13391,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.Offer> values) {
         if (offersBuilder_ == null) {
           ensureOffersIsMutable();
-          super.addAll(values, offers_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, offers_);
           onChanged();
         } else {
           offersBuilder_.addAllMessages(values);
@@ -13544,7 +13490,6 @@ public final class Messages {
         return offersBuilder_;
       }
 
-      // repeated string pids = 2;
       private com.google.protobuf.LazyStringList pids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePidsIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
@@ -13555,9 +13500,9 @@ public final class Messages {
       /**
        * <code>repeated string pids = 2;</code>
        */
-      public java.util.List<java.lang.String>
+      public com.google.protobuf.ProtocolStringList
           getPidsList() {
-        return java.util.Collections.unmodifiableList(pids_);
+        return pids_.getUnmodifiableView();
       }
       /**
        * <code>repeated string pids = 2;</code>
@@ -13610,7 +13555,8 @@ public final class Messages {
       public Builder addAllPids(
           java.lang.Iterable<java.lang.String> values) {
         ensurePidsIsMutable();
-        super.addAll(values, pids_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pids_);
         onChanged();
         return this;
       }
@@ -13648,10 +13594,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ResourceOffersMessage)
   }
 
-  public interface LaunchTasksMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface LaunchTasksMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.LaunchTasksMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -13665,7 +13611,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // repeated .mesos.TaskInfo tasks = 3;
     /**
      * <code>repeated .mesos.TaskInfo tasks = 3;</code>
      */
@@ -13690,7 +13635,6 @@ public final class Messages {
     org.apache.mesos.Protos.TaskInfoOrBuilder getTasksOrBuilder(
         int index);
 
-    // required .mesos.Filters filters = 5;
     /**
      * <code>required .mesos.Filters filters = 5;</code>
      */
@@ -13704,7 +13648,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FiltersOrBuilder getFiltersOrBuilder();
 
-    // repeated .mesos.OfferID offer_ids = 6;
     /**
      * <code>repeated .mesos.OfferID offer_ids = 6;</code>
      */
@@ -13733,8 +13676,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.LaunchTasksMessage}
    */
   public static final class LaunchTasksMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements LaunchTasksMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.LaunchTasksMessage)
+      LaunchTasksMessageOrBuilder {
     // Use LaunchTasksMessage.newBuilder() to construct.
     private LaunchTasksMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -13868,7 +13812,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -13890,7 +13833,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // repeated .mesos.TaskInfo tasks = 3;
     public static final int TASKS_FIELD_NUMBER = 3;
     private java.util.List<org.apache.mesos.Protos.TaskInfo> tasks_;
     /**
@@ -13926,7 +13868,6 @@ public final class Messages {
       return tasks_.get(index);
     }
 
-    // required .mesos.Filters filters = 5;
     public static final int FILTERS_FIELD_NUMBER = 5;
     private org.apache.mesos.Protos.Filters filters_;
     /**
@@ -13948,7 +13889,6 @@ public final class Messages {
       return filters_;
     }
 
-    // repeated .mesos.OfferID offer_ids = 6;
     public static final int OFFER_IDS_FIELD_NUMBER = 6;
     private java.util.List<org.apache.mesos.Protos.OfferID> offerIds_;
     /**
@@ -13993,7 +13933,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -14145,8 +14086,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.LaunchTasksMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.LaunchTasksMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.LaunchTasksMessage)
+        mesos.internal.Messages.LaunchTasksMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_LaunchTasksMessage_descriptor;
@@ -14394,7 +14336,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -14503,7 +14444,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -14511,7 +14452,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // repeated .mesos.TaskInfo tasks = 3;
       private java.util.List<org.apache.mesos.Protos.TaskInfo> tasks_ =
         java.util.Collections.emptyList();
       private void ensureTasksIsMutable() {
@@ -14653,7 +14593,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.TaskInfo> values) {
         if (tasksBuilder_ == null) {
           ensureTasksIsMutable();
-          super.addAll(values, tasks_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tasks_);
           onChanged();
         } else {
           tasksBuilder_.addAllMessages(values);
@@ -14751,7 +14692,6 @@ public final class Messages {
         return tasksBuilder_;
       }
 
-      // required .mesos.Filters filters = 5;
       private org.apache.mesos.Protos.Filters filters_ = org.apache.mesos.Protos.Filters.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.Filters, org.apache.mesos.Protos.Filters.Builder, org.apache.mesos.Protos.FiltersOrBuilder> filtersBuilder_;
@@ -14860,7 +14800,7 @@ public final class Messages {
         if (filtersBuilder_ == null) {
           filtersBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.Filters, org.apache.mesos.Protos.Filters.Builder, org.apache.mesos.Protos.FiltersOrBuilder>(
-                  filters_,
+                  getFilters(),
                   getParentForChildren(),
                   isClean());
           filters_ = null;
@@ -14868,7 +14808,6 @@ public final class Messages {
         return filtersBuilder_;
       }
 
-      // repeated .mesos.OfferID offer_ids = 6;
       private java.util.List<org.apache.mesos.Protos.OfferID> offerIds_ =
         java.util.Collections.emptyList();
       private void ensureOfferIdsIsMutable() {
@@ -15010,7 +14949,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.OfferID> values) {
         if (offerIdsBuilder_ == null) {
           ensureOfferIdsIsMutable();
-          super.addAll(values, offerIds_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, offerIds_);
           onChanged();
         } else {
           offerIdsBuilder_.addAllMessages(values);
@@ -15119,10 +15059,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.LaunchTasksMessage)
   }
 
-  public interface RescindResourceOfferMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RescindResourceOfferMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.RescindResourceOfferMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.OfferID offer_id = 1;
     /**
      * <code>required .mesos.OfferID offer_id = 1;</code>
      */
@@ -15140,8 +15080,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.RescindResourceOfferMessage}
    */
   public static final class RescindResourceOfferMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements RescindResourceOfferMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.RescindResourceOfferMessage)
+      RescindResourceOfferMessageOrBuilder {
     // Use RescindResourceOfferMessage.newBuilder() to construct.
     private RescindResourceOfferMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -15240,7 +15181,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.OfferID offer_id = 1;
     public static final int OFFER_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.OfferID offerId_;
     /**
@@ -15268,7 +15208,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasOfferId()) {
         memoizedIsInitialized = 0;
@@ -15383,8 +15324,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.RescindResourceOfferMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.RescindResourceOfferMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.RescindResourceOfferMessage)
+        mesos.internal.Messages.RescindResourceOfferMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_RescindResourceOfferMessage_descriptor;
@@ -15514,7 +15456,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.OfferID offer_id = 1;
       private org.apache.mesos.Protos.OfferID offerId_ = org.apache.mesos.Protos.OfferID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.OfferID, org.apache.mesos.Protos.OfferID.Builder, org.apache.mesos.Protos.OfferIDOrBuilder> offerIdBuilder_;
@@ -15623,7 +15564,7 @@ public final class Messages {
         if (offerIdBuilder_ == null) {
           offerIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.OfferID, org.apache.mesos.Protos.OfferID.Builder, org.apache.mesos.Protos.OfferIDOrBuilder>(
-                  offerId_,
+                  getOfferId(),
                   getParentForChildren(),
                   isClean());
           offerId_ = null;
@@ -15642,10 +15583,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.RescindResourceOfferMessage)
   }
 
-  public interface ReviveOffersMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ReviveOffersMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ReviveOffersMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -15663,8 +15604,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ReviveOffersMessage}
    */
   public static final class ReviveOffersMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ReviveOffersMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ReviveOffersMessage)
+      ReviveOffersMessageOrBuilder {
     // Use ReviveOffersMessage.newBuilder() to construct.
     private ReviveOffersMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -15763,7 +15705,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -15791,7 +15732,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -15906,8 +15848,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ReviveOffersMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ReviveOffersMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ReviveOffersMessage)
+        mesos.internal.Messages.ReviveOffersMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ReviveOffersMessage_descriptor;
@@ -16037,7 +15980,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -16146,7 +16088,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -16165,24 +16107,23 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ReviveOffersMessage)
   }
 
-  public interface RunTaskMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RunTaskMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.RunTaskMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
-     * <code>required .mesos.FrameworkID framework_id = 1;</code>
+     * <code>optional .mesos.FrameworkID framework_id = 1;</code>
      */
     boolean hasFrameworkId();
     /**
-     * <code>required .mesos.FrameworkID framework_id = 1;</code>
+     * <code>optional .mesos.FrameworkID framework_id = 1;</code>
      */
     org.apache.mesos.Protos.FrameworkID getFrameworkId();
     /**
-     * <code>required .mesos.FrameworkID framework_id = 1;</code>
+     * <code>optional .mesos.FrameworkID framework_id = 1;</code>
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.FrameworkInfo framework = 2;
     /**
      * <code>required .mesos.FrameworkInfo framework = 2;</code>
      */
@@ -16196,7 +16137,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkInfoOrBuilder getFrameworkOrBuilder();
 
-    // required string pid = 3;
     /**
      * <code>required string pid = 3;</code>
      */
@@ -16211,7 +16151,6 @@ public final class Messages {
     com.google.protobuf.ByteString
         getPidBytes();
 
-    // required .mesos.TaskInfo task = 4;
     /**
      * <code>required .mesos.TaskInfo task = 4;</code>
      */
@@ -16229,8 +16168,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.RunTaskMessage}
    */
   public static final class RunTaskMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements RunTaskMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.RunTaskMessage)
+      RunTaskMessageOrBuilder {
     // Use RunTaskMessage.newBuilder() to construct.
     private RunTaskMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -16303,8 +16243,9 @@ public final class Messages {
               break;
             }
             case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              pid_ = input.readBytes();
+              pid_ = bs;
               break;
             }
             case 34: {
@@ -16360,29 +16301,27 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
-     * <code>required .mesos.FrameworkID framework_id = 1;</code>
+     * <code>optional .mesos.FrameworkID framework_id = 1;</code>
      */
     public boolean hasFrameworkId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .mesos.FrameworkID framework_id = 1;</code>
+     * <code>optional .mesos.FrameworkID framework_id = 1;</code>
      */
     public org.apache.mesos.Protos.FrameworkID getFrameworkId() {
       return frameworkId_;
     }
     /**
-     * <code>required .mesos.FrameworkID framework_id = 1;</code>
+     * <code>optional .mesos.FrameworkID framework_id = 1;</code>
      */
     public org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder() {
       return frameworkId_;
     }
 
-    // required .mesos.FrameworkInfo framework = 2;
     public static final int FRAMEWORK_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.FrameworkInfo framework_;
     /**
@@ -16404,7 +16343,6 @@ public final class Messages {
       return framework_;
     }
 
-    // required string pid = 3;
     public static final int PID_FIELD_NUMBER = 3;
     private java.lang.Object pid_;
     /**
@@ -16447,7 +16385,6 @@ public final class Messages {
       }
     }
 
-    // required .mesos.TaskInfo task = 4;
     public static final int TASK_FIELD_NUMBER = 4;
     private org.apache.mesos.Protos.TaskInfo task_;
     /**
@@ -16478,12 +16415,9 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
-      if (!hasFrameworkId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasFramework()) {
         memoizedIsInitialized = 0;
         return false;
@@ -16496,9 +16430,11 @@ public final class Messages {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!getFrameworkId().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
+      if (hasFrameworkId()) {
+        if (!getFrameworkId().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       if (!getFramework().isInitialized()) {
         memoizedIsInitialized = 0;
@@ -16634,8 +16570,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.RunTaskMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.RunTaskMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.RunTaskMessage)
+        mesos.internal.Messages.RunTaskMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_RunTaskMessage_descriptor;
@@ -16782,10 +16719,6 @@ public final class Messages {
       }
 
       public final boolean isInitialized() {
-        if (!hasFrameworkId()) {
-          
-          return false;
-        }
         if (!hasFramework()) {
           
           return false;
@@ -16798,9 +16731,11 @@ public final class Messages {
           
           return false;
         }
-        if (!getFrameworkId().isInitialized()) {
-          
-          return false;
+        if (hasFrameworkId()) {
+          if (!getFrameworkId().isInitialized()) {
+            
+            return false;
+          }
         }
         if (!getFramework().isInitialized()) {
           
@@ -16832,18 +16767,17 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public boolean hasFrameworkId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public org.apache.mesos.Protos.FrameworkID getFrameworkId() {
         if (frameworkIdBuilder_ == null) {
@@ -16853,7 +16787,7 @@ public final class Messages {
         }
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public Builder setFrameworkId(org.apache.mesos.Protos.FrameworkID value) {
         if (frameworkIdBuilder_ == null) {
@@ -16869,7 +16803,7 @@ public final class Messages {
         return this;
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public Builder setFrameworkId(
           org.apache.mesos.Protos.FrameworkID.Builder builderForValue) {
@@ -16883,7 +16817,7 @@ public final class Messages {
         return this;
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public Builder mergeFrameworkId(org.apache.mesos.Protos.FrameworkID value) {
         if (frameworkIdBuilder_ == null) {
@@ -16902,7 +16836,7 @@ public final class Messages {
         return this;
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public Builder clearFrameworkId() {
         if (frameworkIdBuilder_ == null) {
@@ -16915,7 +16849,7 @@ public final class Messages {
         return this;
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public org.apache.mesos.Protos.FrameworkID.Builder getFrameworkIdBuilder() {
         bitField0_ |= 0x00000001;
@@ -16923,7 +16857,7 @@ public final class Messages {
         return getFrameworkIdFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       public org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder() {
         if (frameworkIdBuilder_ != null) {
@@ -16933,7 +16867,7 @@ public final class Messages {
         }
       }
       /**
-       * <code>required .mesos.FrameworkID framework_id = 1;</code>
+       * <code>optional .mesos.FrameworkID framework_id = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> 
@@ -16941,7 +16875,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -16949,7 +16883,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.FrameworkInfo framework = 2;
       private org.apache.mesos.Protos.FrameworkInfo framework_ = org.apache.mesos.Protos.FrameworkInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder> frameworkBuilder_;
@@ -17058,7 +16991,7 @@ public final class Messages {
         if (frameworkBuilder_ == null) {
           frameworkBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder>(
-                  framework_,
+                  getFramework(),
                   getParentForChildren(),
                   isClean());
           framework_ = null;
@@ -17066,7 +16999,6 @@ public final class Messages {
         return frameworkBuilder_;
       }
 
-      // required string pid = 3;
       private java.lang.Object pid_ = "";
       /**
        * <code>required string pid = 3;</code>
@@ -17080,9 +17012,12 @@ public final class Messages {
       public java.lang.String getPid() {
         java.lang.Object ref = pid_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          pid_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            pid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -17140,7 +17075,6 @@ public final class Messages {
         return this;
       }
 
-      // required .mesos.TaskInfo task = 4;
       private org.apache.mesos.Protos.TaskInfo task_ = org.apache.mesos.Protos.TaskInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.TaskInfo, org.apache.mesos.Protos.TaskInfo.Builder, org.apache.mesos.Protos.TaskInfoOrBuilder> taskBuilder_;
@@ -17249,7 +17183,7 @@ public final class Messages {
         if (taskBuilder_ == null) {
           taskBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.TaskInfo, org.apache.mesos.Protos.TaskInfo.Builder, org.apache.mesos.Protos.TaskInfoOrBuilder>(
-                  task_,
+                  getTask(),
                   getParentForChildren(),
                   isClean());
           task_ = null;
@@ -17268,10 +17202,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.RunTaskMessage)
   }
 
-  public interface KillTaskMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface KillTaskMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.KillTaskMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      *
@@ -17300,7 +17234,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.TaskID task_id = 2;
     /**
      * <code>required .mesos.TaskID task_id = 2;</code>
      */
@@ -17318,8 +17251,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.KillTaskMessage}
    */
   public static final class KillTaskMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements KillTaskMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.KillTaskMessage)
+      KillTaskMessageOrBuilder {
     // Use KillTaskMessage.newBuilder() to construct.
     private KillTaskMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -17431,7 +17365,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -17468,7 +17401,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.TaskID task_id = 2;
     public static final int TASK_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.TaskID taskId_;
     /**
@@ -17497,7 +17429,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -17627,8 +17560,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.KillTaskMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.KillTaskMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.KillTaskMessage)
+        mesos.internal.Messages.KillTaskMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_KillTaskMessage_descriptor;
@@ -17784,7 +17718,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -17938,7 +17871,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -17946,7 +17879,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.TaskID task_id = 2;
       private org.apache.mesos.Protos.TaskID taskId_ = org.apache.mesos.Protos.TaskID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder> taskIdBuilder_;
@@ -18055,7 +17987,7 @@ public final class Messages {
         if (taskIdBuilder_ == null) {
           taskIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder>(
-                  taskId_,
+                  getTaskId(),
                   getParentForChildren(),
                   isClean());
           taskId_ = null;
@@ -18074,10 +18006,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.KillTaskMessage)
   }
 
-  public interface StatusUpdateMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface StatusUpdateMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.StatusUpdateMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.internal.StatusUpdate update = 1;
     /**
      * <code>required .mesos.internal.StatusUpdate update = 1;</code>
      */
@@ -18091,7 +18023,6 @@ public final class Messages {
      */
     mesos.internal.Messages.StatusUpdateOrBuilder getUpdateOrBuilder();
 
-    // optional string pid = 2;
     /**
      * <code>optional string pid = 2;</code>
      */
@@ -18115,8 +18046,9 @@ public final class Messages {
    * </pre>
    */
   public static final class StatusUpdateMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements StatusUpdateMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.StatusUpdateMessage)
+      StatusUpdateMessageOrBuilder {
     // Use StatusUpdateMessage.newBuilder() to construct.
     private StatusUpdateMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -18176,8 +18108,9 @@ public final class Messages {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              pid_ = input.readBytes();
+              pid_ = bs;
               break;
             }
           }
@@ -18220,7 +18153,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.internal.StatusUpdate update = 1;
     public static final int UPDATE_FIELD_NUMBER = 1;
     private mesos.internal.Messages.StatusUpdate update_;
     /**
@@ -18242,7 +18174,6 @@ public final class Messages {
       return update_;
     }
 
-    // optional string pid = 2;
     public static final int PID_FIELD_NUMBER = 2;
     private java.lang.Object pid_;
     /**
@@ -18292,7 +18223,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasUpdate()) {
         memoizedIsInitialized = 0;
@@ -18419,8 +18351,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.StatusUpdateMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.StatusUpdateMessage)
+        mesos.internal.Messages.StatusUpdateMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_StatusUpdateMessage_descriptor;
@@ -18561,7 +18494,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.internal.StatusUpdate update = 1;
       private mesos.internal.Messages.StatusUpdate update_ = mesos.internal.Messages.StatusUpdate.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           mesos.internal.Messages.StatusUpdate, mesos.internal.Messages.StatusUpdate.Builder, mesos.internal.Messages.StatusUpdateOrBuilder> updateBuilder_;
@@ -18670,7 +18602,7 @@ public final class Messages {
         if (updateBuilder_ == null) {
           updateBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               mesos.internal.Messages.StatusUpdate, mesos.internal.Messages.StatusUpdate.Builder, mesos.internal.Messages.StatusUpdateOrBuilder>(
-                  update_,
+                  getUpdate(),
                   getParentForChildren(),
                   isClean());
           update_ = null;
@@ -18678,7 +18610,6 @@ public final class Messages {
         return updateBuilder_;
       }
 
-      // optional string pid = 2;
       private java.lang.Object pid_ = "";
       /**
        * <code>optional string pid = 2;</code>
@@ -18692,9 +18623,12 @@ public final class Messages {
       public java.lang.String getPid() {
         java.lang.Object ref = pid_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          pid_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            pid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -18763,10 +18697,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.StatusUpdateMessage)
   }
 
-  public interface StatusUpdateAcknowledgementMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface StatusUpdateAcknowledgementMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.StatusUpdateAcknowledgementMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -18780,7 +18714,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.FrameworkID framework_id = 2;
     /**
      * <code>required .mesos.FrameworkID framework_id = 2;</code>
      */
@@ -18794,7 +18727,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.TaskID task_id = 3;
     /**
      * <code>required .mesos.TaskID task_id = 3;</code>
      */
@@ -18808,7 +18740,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.TaskIDOrBuilder getTaskIdOrBuilder();
 
-    // required bytes uuid = 4;
     /**
      * <code>required bytes uuid = 4;</code>
      */
@@ -18822,8 +18753,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.StatusUpdateAcknowledgementMessage}
    */
   public static final class StatusUpdateAcknowledgementMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements StatusUpdateAcknowledgementMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.StatusUpdateAcknowledgementMessage)
+      StatusUpdateAcknowledgementMessageOrBuilder {
     // Use StatusUpdateAcknowledgementMessage.newBuilder() to construct.
     private StatusUpdateAcknowledgementMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -18953,7 +18885,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -18975,7 +18906,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.FrameworkID framework_id = 2;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -18997,7 +18927,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.TaskID task_id = 3;
     public static final int TASK_ID_FIELD_NUMBER = 3;
     private org.apache.mesos.Protos.TaskID taskId_;
     /**
@@ -19019,7 +18948,6 @@ public final class Messages {
       return taskId_;
     }
 
-    // required bytes uuid = 4;
     public static final int UUID_FIELD_NUMBER = 4;
     private com.google.protobuf.ByteString uuid_;
     /**
@@ -19044,7 +18972,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -19200,8 +19129,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.StatusUpdateAcknowledgementMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.StatusUpdateAcknowledgementMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.StatusUpdateAcknowledgementMessage)
+        mesos.internal.Messages.StatusUpdateAcknowledgementMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_descriptor;
@@ -19396,7 +19326,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -19505,7 +19434,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -19513,7 +19442,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.FrameworkID framework_id = 2;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -19622,7 +19550,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -19630,7 +19558,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.TaskID task_id = 3;
       private org.apache.mesos.Protos.TaskID taskId_ = org.apache.mesos.Protos.TaskID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder> taskIdBuilder_;
@@ -19739,7 +19666,7 @@ public final class Messages {
         if (taskIdBuilder_ == null) {
           taskIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder>(
-                  taskId_,
+                  getTaskId(),
                   getParentForChildren(),
                   isClean());
           taskId_ = null;
@@ -19747,7 +19674,6 @@ public final class Messages {
         return taskIdBuilder_;
       }
 
-      // required bytes uuid = 4;
       private com.google.protobuf.ByteString uuid_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes uuid = 4;</code>
@@ -19794,10 +19720,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.StatusUpdateAcknowledgementMessage)
   }
 
-  public interface LostSlaveMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface LostSlaveMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.LostSlaveMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -19815,8 +19741,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.LostSlaveMessage}
    */
   public static final class LostSlaveMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements LostSlaveMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.LostSlaveMessage)
+      LostSlaveMessageOrBuilder {
     // Use LostSlaveMessage.newBuilder() to construct.
     private LostSlaveMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -19915,7 +19842,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -19943,7 +19869,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -20058,8 +19985,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.LostSlaveMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.LostSlaveMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.LostSlaveMessage)
+        mesos.internal.Messages.LostSlaveMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_LostSlaveMessage_descriptor;
@@ -20189,7 +20117,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -20298,7 +20225,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -20317,10 +20244,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.LostSlaveMessage)
   }
 
-  public interface ReconcileTasksMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ReconcileTasksMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ReconcileTasksMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -20334,7 +20261,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // repeated .mesos.TaskStatus statuses = 2;
     /**
      * <code>repeated .mesos.TaskStatus statuses = 2;</code>
      *
@@ -20392,8 +20318,9 @@ public final class Messages {
    * </pre>
    */
   public static final class ReconcileTasksMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ReconcileTasksMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ReconcileTasksMessage)
+      ReconcileTasksMessageOrBuilder {
     // Use ReconcileTasksMessage.newBuilder() to construct.
     private ReconcileTasksMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -20503,7 +20430,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -20525,7 +20451,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // repeated .mesos.TaskStatus statuses = 2;
     public static final int STATUSES_FIELD_NUMBER = 2;
     private java.util.List<org.apache.mesos.Protos.TaskStatus> statuses_;
     /**
@@ -20588,7 +20513,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -20725,8 +20651,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ReconcileTasksMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ReconcileTasksMessage)
+        mesos.internal.Messages.ReconcileTasksMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ReconcileTasksMessage_descriptor;
@@ -20904,7 +20831,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -21013,7 +20939,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -21021,7 +20947,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // repeated .mesos.TaskStatus statuses = 2;
       private java.util.List<org.apache.mesos.Protos.TaskStatus> statuses_ =
         java.util.Collections.emptyList();
       private void ensureStatusesIsMutable() {
@@ -21203,7 +21128,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.TaskStatus> values) {
         if (statusesBuilder_ == null) {
           ensureStatusesIsMutable();
-          super.addAll(values, statuses_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, statuses_);
           onChanged();
         } else {
           statusesBuilder_.addAllMessages(values);
@@ -21344,10 +21270,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ReconcileTasksMessage)
   }
 
-  public interface FrameworkErrorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface FrameworkErrorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.FrameworkErrorMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string message = 2;
     /**
      * <code>required string message = 2;</code>
      */
@@ -21366,8 +21292,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.FrameworkErrorMessage}
    */
   public static final class FrameworkErrorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements FrameworkErrorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.FrameworkErrorMessage)
+      FrameworkErrorMessageOrBuilder {
     // Use FrameworkErrorMessage.newBuilder() to construct.
     private FrameworkErrorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -21414,8 +21341,9 @@ public final class Messages {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              message_ = input.readBytes();
+              message_ = bs;
               break;
             }
           }
@@ -21458,7 +21386,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required string message = 2;
     public static final int MESSAGE_FIELD_NUMBER = 2;
     private java.lang.Object message_;
     /**
@@ -21507,7 +21434,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasMessage()) {
         memoizedIsInitialized = 0;
@@ -21618,8 +21546,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.FrameworkErrorMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.FrameworkErrorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.FrameworkErrorMessage)
+        mesos.internal.Messages.FrameworkErrorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_FrameworkErrorMessage_descriptor;
@@ -21738,7 +21667,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required string message = 2;
       private java.lang.Object message_ = "";
       /**
        * <code>required string message = 2;</code>
@@ -21752,9 +21680,12 @@ public final class Messages {
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          message_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            message_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -21823,10 +21754,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.FrameworkErrorMessage)
   }
 
-  public interface RegisterSlaveMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RegisterSlaveMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.RegisterSlaveMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveInfo slave = 1;
     /**
      * <code>required .mesos.SlaveInfo slave = 1;</code>
      */
@@ -21840,7 +21771,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveInfoOrBuilder getSlaveOrBuilder();
 
-    // optional string version = 2;
     /**
      * <code>optional string version = 2;</code>
      *
@@ -21877,8 +21807,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.RegisterSlaveMessage}
    */
   public static final class RegisterSlaveMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements RegisterSlaveMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.RegisterSlaveMessage)
+      RegisterSlaveMessageOrBuilder {
     // Use RegisterSlaveMessage.newBuilder() to construct.
     private RegisterSlaveMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -21938,8 +21869,9 @@ public final class Messages {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              version_ = input.readBytes();
+              version_ = bs;
               break;
             }
           }
@@ -21982,7 +21914,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveInfo slave = 1;
     public static final int SLAVE_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveInfo slave_;
     /**
@@ -22004,7 +21935,6 @@ public final class Messages {
       return slave_;
     }
 
-    // optional string version = 2;
     public static final int VERSION_FIELD_NUMBER = 2;
     private java.lang.Object version_;
     /**
@@ -22072,7 +22002,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlave()) {
         memoizedIsInitialized = 0;
@@ -22194,8 +22125,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.RegisterSlaveMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.RegisterSlaveMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.RegisterSlaveMessage)
+        mesos.internal.Messages.RegisterSlaveMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_RegisterSlaveMessage_descriptor;
@@ -22336,7 +22268,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveInfo slave = 1;
       private org.apache.mesos.Protos.SlaveInfo slave_ = org.apache.mesos.Protos.SlaveInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder> slaveBuilder_;
@@ -22445,7 +22376,7 @@ public final class Messages {
         if (slaveBuilder_ == null) {
           slaveBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder>(
-                  slave_,
+                  getSlave(),
                   getParentForChildren(),
                   isClean());
           slave_ = null;
@@ -22453,7 +22384,6 @@ public final class Messages {
         return slaveBuilder_;
       }
 
-      // optional string version = 2;
       private java.lang.Object version_ = "";
       /**
        * <code>optional string version = 2;</code>
@@ -22479,9 +22409,12 @@ public final class Messages {
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          version_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            version_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -22574,10 +22507,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.RegisterSlaveMessage)
   }
 
-  public interface ReregisterSlaveMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ReregisterSlaveMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ReregisterSlaveMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional .mesos.SlaveID slave_id = 1;
     /**
      * <code>optional .mesos.SlaveID slave_id = 1;</code>
      *
@@ -22609,7 +22542,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.SlaveInfo slave = 2;
     /**
      * <code>required .mesos.SlaveInfo slave = 2;</code>
      */
@@ -22623,7 +22555,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveInfoOrBuilder getSlaveOrBuilder();
 
-    // repeated .mesos.ExecutorInfo executor_infos = 4;
     /**
      * <code>repeated .mesos.ExecutorInfo executor_infos = 4;</code>
      */
@@ -22648,7 +22579,6 @@ public final class Messages {
     org.apache.mesos.Protos.ExecutorInfoOrBuilder getExecutorInfosOrBuilder(
         int index);
 
-    // repeated .mesos.internal.Task tasks = 3;
     /**
      * <code>repeated .mesos.internal.Task tasks = 3;</code>
      */
@@ -22673,7 +22603,6 @@ public final class Messages {
     mesos.internal.Messages.TaskOrBuilder getTasksOrBuilder(
         int index);
 
-    // repeated .mesos.internal.Archive.Framework completed_frameworks = 5;
     /**
      * <code>repeated .mesos.internal.Archive.Framework completed_frameworks = 5;</code>
      */
@@ -22698,7 +22627,6 @@ public final class Messages {
     mesos.internal.Messages.Archive.FrameworkOrBuilder getCompletedFrameworksOrBuilder(
         int index);
 
-    // optional string version = 6;
     /**
      * <code>optional string version = 6;</code>
      *
@@ -22735,8 +22663,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ReregisterSlaveMessage}
    */
   public static final class ReregisterSlaveMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ReregisterSlaveMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ReregisterSlaveMessage)
+      ReregisterSlaveMessageOrBuilder {
     // Use ReregisterSlaveMessage.newBuilder() to construct.
     private ReregisterSlaveMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -22833,8 +22762,9 @@ public final class Messages {
               break;
             }
             case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
-              version_ = input.readBytes();
+              version_ = bs;
               break;
             }
           }
@@ -22886,7 +22816,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // optional .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -22926,7 +22855,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.SlaveInfo slave = 2;
     public static final int SLAVE_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.SlaveInfo slave_;
     /**
@@ -22948,7 +22876,6 @@ public final class Messages {
       return slave_;
     }
 
-    // repeated .mesos.ExecutorInfo executor_infos = 4;
     public static final int EXECUTOR_INFOS_FIELD_NUMBER = 4;
     private java.util.List<org.apache.mesos.Protos.ExecutorInfo> executorInfos_;
     /**
@@ -22984,7 +22911,6 @@ public final class Messages {
       return executorInfos_.get(index);
     }
 
-    // repeated .mesos.internal.Task tasks = 3;
     public static final int TASKS_FIELD_NUMBER = 3;
     private java.util.List<mesos.internal.Messages.Task> tasks_;
     /**
@@ -23020,7 +22946,6 @@ public final class Messages {
       return tasks_.get(index);
     }
 
-    // repeated .mesos.internal.Archive.Framework completed_frameworks = 5;
     public static final int COMPLETED_FRAMEWORKS_FIELD_NUMBER = 5;
     private java.util.List<mesos.internal.Messages.Archive.Framework> completedFrameworks_;
     /**
@@ -23056,7 +22981,6 @@ public final class Messages {
       return completedFrameworks_.get(index);
     }
 
-    // optional string version = 6;
     public static final int VERSION_FIELD_NUMBER = 6;
     private java.lang.Object version_;
     /**
@@ -23128,7 +23052,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlave()) {
         memoizedIsInitialized = 0;
@@ -23302,8 +23227,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ReregisterSlaveMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ReregisterSlaveMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ReregisterSlaveMessage)
+        mesos.internal.Messages.ReregisterSlaveMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ReregisterSlaveMessage_descriptor;
@@ -23612,7 +23538,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // optional .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -23775,7 +23700,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -23783,7 +23708,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.SlaveInfo slave = 2;
       private org.apache.mesos.Protos.SlaveInfo slave_ = org.apache.mesos.Protos.SlaveInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder> slaveBuilder_;
@@ -23892,7 +23816,7 @@ public final class Messages {
         if (slaveBuilder_ == null) {
           slaveBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder>(
-                  slave_,
+                  getSlave(),
                   getParentForChildren(),
                   isClean());
           slave_ = null;
@@ -23900,7 +23824,6 @@ public final class Messages {
         return slaveBuilder_;
       }
 
-      // repeated .mesos.ExecutorInfo executor_infos = 4;
       private java.util.List<org.apache.mesos.Protos.ExecutorInfo> executorInfos_ =
         java.util.Collections.emptyList();
       private void ensureExecutorInfosIsMutable() {
@@ -24042,7 +23965,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.ExecutorInfo> values) {
         if (executorInfosBuilder_ == null) {
           ensureExecutorInfosIsMutable();
-          super.addAll(values, executorInfos_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, executorInfos_);
           onChanged();
         } else {
           executorInfosBuilder_.addAllMessages(values);
@@ -24140,7 +24064,6 @@ public final class Messages {
         return executorInfosBuilder_;
       }
 
-      // repeated .mesos.internal.Task tasks = 3;
       private java.util.List<mesos.internal.Messages.Task> tasks_ =
         java.util.Collections.emptyList();
       private void ensureTasksIsMutable() {
@@ -24282,7 +24205,8 @@ public final class Messages {
           java.lang.Iterable<? extends mesos.internal.Messages.Task> values) {
         if (tasksBuilder_ == null) {
           ensureTasksIsMutable();
-          super.addAll(values, tasks_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tasks_);
           onChanged();
         } else {
           tasksBuilder_.addAllMessages(values);
@@ -24380,7 +24304,6 @@ public final class Messages {
         return tasksBuilder_;
       }
 
-      // repeated .mesos.internal.Archive.Framework completed_frameworks = 5;
       private java.util.List<mesos.internal.Messages.Archive.Framework> completedFrameworks_ =
         java.util.Collections.emptyList();
       private void ensureCompletedFrameworksIsMutable() {
@@ -24522,7 +24445,8 @@ public final class Messages {
           java.lang.Iterable<? extends mesos.internal.Messages.Archive.Framework> values) {
         if (completedFrameworksBuilder_ == null) {
           ensureCompletedFrameworksIsMutable();
-          super.addAll(values, completedFrameworks_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, completedFrameworks_);
           onChanged();
         } else {
           completedFrameworksBuilder_.addAllMessages(values);
@@ -24620,7 +24544,6 @@ public final class Messages {
         return completedFrameworksBuilder_;
       }
 
-      // optional string version = 6;
       private java.lang.Object version_ = "";
       /**
        * <code>optional string version = 6;</code>
@@ -24646,9 +24569,12 @@ public final class Messages {
       public java.lang.String getVersion() {
         java.lang.Object ref = version_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          version_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            version_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -24741,10 +24667,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ReregisterSlaveMessage)
   }
 
-  public interface SlaveRegisteredMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SlaveRegisteredMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.SlaveRegisteredMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -24762,8 +24688,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.SlaveRegisteredMessage}
    */
   public static final class SlaveRegisteredMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements SlaveRegisteredMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.SlaveRegisteredMessage)
+      SlaveRegisteredMessageOrBuilder {
     // Use SlaveRegisteredMessage.newBuilder() to construct.
     private SlaveRegisteredMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -24862,7 +24789,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -24890,7 +24816,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -25005,8 +24932,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.SlaveRegisteredMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.SlaveRegisteredMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.SlaveRegisteredMessage)
+        mesos.internal.Messages.SlaveRegisteredMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_SlaveRegisteredMessage_descriptor;
@@ -25136,7 +25064,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -25245,7 +25172,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -25264,10 +25191,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.SlaveRegisteredMessage)
   }
 
-  public interface SlaveReregisteredMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface SlaveReregisteredMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.SlaveReregisteredMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -25281,7 +25208,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // repeated .mesos.internal.ReconcileTasksMessage reconciliations = 2;
     /**
      * <code>repeated .mesos.internal.ReconcileTasksMessage reconciliations = 2;</code>
      */
@@ -25310,8 +25236,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.SlaveReregisteredMessage}
    */
   public static final class SlaveReregisteredMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements SlaveReregisteredMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.SlaveReregisteredMessage)
+      SlaveReregisteredMessageOrBuilder {
     // Use SlaveReregisteredMessage.newBuilder() to construct.
     private SlaveReregisteredMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -25421,7 +25348,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -25443,7 +25369,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // repeated .mesos.internal.ReconcileTasksMessage reconciliations = 2;
     public static final int RECONCILIATIONS_FIELD_NUMBER = 2;
     private java.util.List<mesos.internal.Messages.ReconcileTasksMessage> reconciliations_;
     /**
@@ -25486,7 +25411,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -25614,8 +25540,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.SlaveReregisteredMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.SlaveReregisteredMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.SlaveReregisteredMessage)
+        mesos.internal.Messages.SlaveReregisteredMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_SlaveReregisteredMessage_descriptor;
@@ -25793,7 +25720,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -25902,7 +25828,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -25910,7 +25836,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // repeated .mesos.internal.ReconcileTasksMessage reconciliations = 2;
       private java.util.List<mesos.internal.Messages.ReconcileTasksMessage> reconciliations_ =
         java.util.Collections.emptyList();
       private void ensureReconciliationsIsMutable() {
@@ -26052,7 +25977,8 @@ public final class Messages {
           java.lang.Iterable<? extends mesos.internal.Messages.ReconcileTasksMessage> values) {
         if (reconciliationsBuilder_ == null) {
           ensureReconciliationsIsMutable();
-          super.addAll(values, reconciliations_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, reconciliations_);
           onChanged();
         } else {
           reconciliationsBuilder_.addAllMessages(values);
@@ -26161,10 +26087,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.SlaveReregisteredMessage)
   }
 
-  public interface UnregisterSlaveMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface UnregisterSlaveMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.UnregisterSlaveMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -26182,8 +26108,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.UnregisterSlaveMessage}
    */
   public static final class UnregisterSlaveMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements UnregisterSlaveMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.UnregisterSlaveMessage)
+      UnregisterSlaveMessageOrBuilder {
     // Use UnregisterSlaveMessage.newBuilder() to construct.
     private UnregisterSlaveMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -26282,7 +26209,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -26310,7 +26236,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -26425,8 +26352,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.UnregisterSlaveMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.UnregisterSlaveMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.UnregisterSlaveMessage)
+        mesos.internal.Messages.UnregisterSlaveMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_UnregisterSlaveMessage_descriptor;
@@ -26556,7 +26484,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -26665,7 +26592,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -26684,10 +26611,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.UnregisterSlaveMessage)
   }
 
-  public interface PingSlaveMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface PingSlaveMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.PingSlaveMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required bool connected = 1;
     /**
      * <code>required bool connected = 1;</code>
      */
@@ -26706,8 +26633,9 @@ public final class Messages {
    * </pre>
    */
   public static final class PingSlaveMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements PingSlaveMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.PingSlaveMessage)
+      PingSlaveMessageOrBuilder {
     // Use PingSlaveMessage.newBuilder() to construct.
     private PingSlaveMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -26798,7 +26726,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required bool connected = 1;
     public static final int CONNECTED_FIELD_NUMBER = 1;
     private boolean connected_;
     /**
@@ -26820,7 +26747,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasConnected()) {
         memoizedIsInitialized = 0;
@@ -26936,8 +26864,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.PingSlaveMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.PingSlaveMessage)
+        mesos.internal.Messages.PingSlaveMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_PingSlaveMessage_descriptor;
@@ -27054,7 +26983,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required bool connected = 1;
       private boolean connected_ ;
       /**
        * <code>required bool connected = 1;</code>
@@ -27098,8 +27026,9 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.PingSlaveMessage)
   }
 
-  public interface PongSlaveMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface PongSlaveMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.PongSlaveMessage)
+      com.google.protobuf.MessageOrBuilder {
   }
   /**
    * Protobuf type {@code mesos.internal.PongSlaveMessage}
@@ -27110,8 +27039,9 @@ public final class Messages {
    * </pre>
    */
   public static final class PongSlaveMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements PongSlaveMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.PongSlaveMessage)
+      PongSlaveMessageOrBuilder {
     // Use PongSlaveMessage.newBuilder() to construct.
     private PongSlaveMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -27200,7 +27130,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -27305,8 +27236,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.PongSlaveMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.PongSlaveMessage)
+        mesos.internal.Messages.PongSlaveMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_PongSlaveMessage_descriptor;
@@ -27417,10 +27349,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.PongSlaveMessage)
   }
 
-  public interface ShutdownFrameworkMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ShutdownFrameworkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ShutdownFrameworkMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -27442,8 +27374,9 @@ public final class Messages {
    * </pre>
    */
   public static final class ShutdownFrameworkMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ShutdownFrameworkMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ShutdownFrameworkMessage)
+      ShutdownFrameworkMessageOrBuilder {
     // Use ShutdownFrameworkMessage.newBuilder() to construct.
     private ShutdownFrameworkMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -27542,7 +27475,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -27570,7 +27502,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -27689,8 +27622,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ShutdownFrameworkMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ShutdownFrameworkMessage)
+        mesos.internal.Messages.ShutdownFrameworkMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ShutdownFrameworkMessage_descriptor;
@@ -27820,7 +27754,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -27929,7 +27862,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -27948,8 +27881,9 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ShutdownFrameworkMessage)
   }
 
-  public interface ShutdownExecutorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ShutdownExecutorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ShutdownExecutorMessage)
+      com.google.protobuf.MessageOrBuilder {
   }
   /**
    * Protobuf type {@code mesos.internal.ShutdownExecutorMessage}
@@ -27960,8 +27894,9 @@ public final class Messages {
    * </pre>
    */
   public static final class ShutdownExecutorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ShutdownExecutorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ShutdownExecutorMessage)
+      ShutdownExecutorMessageOrBuilder {
     // Use ShutdownExecutorMessage.newBuilder() to construct.
     private ShutdownExecutorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -28050,7 +27985,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -28155,8 +28091,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ShutdownExecutorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ShutdownExecutorMessage)
+        mesos.internal.Messages.ShutdownExecutorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ShutdownExecutorMessage_descriptor;
@@ -28267,10 +28204,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ShutdownExecutorMessage)
   }
 
-  public interface UpdateFrameworkMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface UpdateFrameworkMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.UpdateFrameworkMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -28284,7 +28221,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required string pid = 2;
     /**
      * <code>required string pid = 2;</code>
      */
@@ -28303,8 +28239,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.UpdateFrameworkMessage}
    */
   public static final class UpdateFrameworkMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements UpdateFrameworkMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.UpdateFrameworkMessage)
+      UpdateFrameworkMessageOrBuilder {
     // Use UpdateFrameworkMessage.newBuilder() to construct.
     private UpdateFrameworkMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -28364,8 +28301,9 @@ public final class Messages {
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              pid_ = input.readBytes();
+              pid_ = bs;
               break;
             }
           }
@@ -28408,7 +28346,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -28430,7 +28367,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required string pid = 2;
     public static final int PID_FIELD_NUMBER = 2;
     private java.lang.Object pid_;
     /**
@@ -28480,7 +28416,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -28606,8 +28543,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.UpdateFrameworkMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.UpdateFrameworkMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.UpdateFrameworkMessage)
+        mesos.internal.Messages.UpdateFrameworkMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_UpdateFrameworkMessage_descriptor;
@@ -28752,7 +28690,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -28861,7 +28798,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -28869,7 +28806,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required string pid = 2;
       private java.lang.Object pid_ = "";
       /**
        * <code>required string pid = 2;</code>
@@ -28883,9 +28819,12 @@ public final class Messages {
       public java.lang.String getPid() {
         java.lang.Object ref = pid_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          pid_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            pid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -28954,10 +28893,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.UpdateFrameworkMessage)
   }
 
-  public interface RegisterExecutorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface RegisterExecutorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.RegisterExecutorMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.FrameworkID framework_id = 1;
     /**
      * <code>required .mesos.FrameworkID framework_id = 1;</code>
      */
@@ -28971,7 +28910,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.ExecutorID executor_id = 2;
     /**
      * <code>required .mesos.ExecutorID executor_id = 2;</code>
      */
@@ -28989,8 +28927,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.RegisterExecutorMessage}
    */
   public static final class RegisterExecutorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements RegisterExecutorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.RegisterExecutorMessage)
+      RegisterExecutorMessageOrBuilder {
     // Use RegisterExecutorMessage.newBuilder() to construct.
     private RegisterExecutorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -29102,7 +29041,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.FrameworkID framework_id = 1;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -29124,7 +29062,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.ExecutorID executor_id = 2;
     public static final int EXECUTOR_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.ExecutorID executorId_;
     /**
@@ -29153,7 +29090,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasFrameworkId()) {
         memoizedIsInitialized = 0;
@@ -29283,8 +29221,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.RegisterExecutorMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.RegisterExecutorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.RegisterExecutorMessage)
+        mesos.internal.Messages.RegisterExecutorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_RegisterExecutorMessage_descriptor;
@@ -29440,7 +29379,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.FrameworkID framework_id = 1;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -29549,7 +29487,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -29557,7 +29495,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.ExecutorID executor_id = 2;
       private org.apache.mesos.Protos.ExecutorID executorId_ = org.apache.mesos.Protos.ExecutorID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder> executorIdBuilder_;
@@ -29666,7 +29603,7 @@ public final class Messages {
         if (executorIdBuilder_ == null) {
           executorIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder>(
-                  executorId_,
+                  getExecutorId(),
                   getParentForChildren(),
                   isClean());
           executorId_ = null;
@@ -29685,10 +29622,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.RegisterExecutorMessage)
   }
 
-  public interface ExecutorRegisteredMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ExecutorRegisteredMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ExecutorRegisteredMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.ExecutorInfo executor_info = 2;
     /**
      * <code>required .mesos.ExecutorInfo executor_info = 2;</code>
      */
@@ -29702,7 +29639,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.ExecutorInfoOrBuilder getExecutorInfoOrBuilder();
 
-    // required .mesos.FrameworkID framework_id = 3;
     /**
      * <code>required .mesos.FrameworkID framework_id = 3;</code>
      */
@@ -29716,7 +29652,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.FrameworkInfo framework_info = 4;
     /**
      * <code>required .mesos.FrameworkInfo framework_info = 4;</code>
      */
@@ -29730,7 +29665,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkInfoOrBuilder getFrameworkInfoOrBuilder();
 
-    // required .mesos.SlaveID slave_id = 5;
     /**
      * <code>required .mesos.SlaveID slave_id = 5;</code>
      */
@@ -29744,7 +29678,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.SlaveInfo slave_info = 6;
     /**
      * <code>required .mesos.SlaveInfo slave_info = 6;</code>
      */
@@ -29762,8 +29695,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ExecutorRegisteredMessage}
    */
   public static final class ExecutorRegisteredMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ExecutorRegisteredMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ExecutorRegisteredMessage)
+      ExecutorRegisteredMessageOrBuilder {
     // Use ExecutorRegisteredMessage.newBuilder() to construct.
     private ExecutorRegisteredMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -29914,7 +29848,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.ExecutorInfo executor_info = 2;
     public static final int EXECUTOR_INFO_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.ExecutorInfo executorInfo_;
     /**
@@ -29936,7 +29869,6 @@ public final class Messages {
       return executorInfo_;
     }
 
-    // required .mesos.FrameworkID framework_id = 3;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 3;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -29958,7 +29890,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.FrameworkInfo framework_info = 4;
     public static final int FRAMEWORK_INFO_FIELD_NUMBER = 4;
     private org.apache.mesos.Protos.FrameworkInfo frameworkInfo_;
     /**
@@ -29980,7 +29911,6 @@ public final class Messages {
       return frameworkInfo_;
     }
 
-    // required .mesos.SlaveID slave_id = 5;
     public static final int SLAVE_ID_FIELD_NUMBER = 5;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -30002,7 +29932,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.SlaveInfo slave_info = 6;
     public static final int SLAVE_INFO_FIELD_NUMBER = 6;
     private org.apache.mesos.Protos.SlaveInfo slaveInfo_;
     /**
@@ -30034,7 +29963,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasExecutorInfo()) {
         memoizedIsInitialized = 0;
@@ -30209,8 +30139,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ExecutorRegisteredMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ExecutorRegisteredMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ExecutorRegisteredMessage)
+        mesos.internal.Messages.ExecutorRegisteredMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ExecutorRegisteredMessage_descriptor;
@@ -30444,7 +30375,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.ExecutorInfo executor_info = 2;
       private org.apache.mesos.Protos.ExecutorInfo executorInfo_ = org.apache.mesos.Protos.ExecutorInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorInfo, org.apache.mesos.Protos.ExecutorInfo.Builder, org.apache.mesos.Protos.ExecutorInfoOrBuilder> executorInfoBuilder_;
@@ -30553,7 +30483,7 @@ public final class Messages {
         if (executorInfoBuilder_ == null) {
           executorInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorInfo, org.apache.mesos.Protos.ExecutorInfo.Builder, org.apache.mesos.Protos.ExecutorInfoOrBuilder>(
-                  executorInfo_,
+                  getExecutorInfo(),
                   getParentForChildren(),
                   isClean());
           executorInfo_ = null;
@@ -30561,7 +30491,6 @@ public final class Messages {
         return executorInfoBuilder_;
       }
 
-      // required .mesos.FrameworkID framework_id = 3;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -30670,7 +30599,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -30678,7 +30607,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.FrameworkInfo framework_info = 4;
       private org.apache.mesos.Protos.FrameworkInfo frameworkInfo_ = org.apache.mesos.Protos.FrameworkInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder> frameworkInfoBuilder_;
@@ -30787,7 +30715,7 @@ public final class Messages {
         if (frameworkInfoBuilder_ == null) {
           frameworkInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder>(
-                  frameworkInfo_,
+                  getFrameworkInfo(),
                   getParentForChildren(),
                   isClean());
           frameworkInfo_ = null;
@@ -30795,7 +30723,6 @@ public final class Messages {
         return frameworkInfoBuilder_;
       }
 
-      // required .mesos.SlaveID slave_id = 5;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -30904,7 +30831,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -30912,7 +30839,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.SlaveInfo slave_info = 6;
       private org.apache.mesos.Protos.SlaveInfo slaveInfo_ = org.apache.mesos.Protos.SlaveInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder> slaveInfoBuilder_;
@@ -31021,7 +30947,7 @@ public final class Messages {
         if (slaveInfoBuilder_ == null) {
           slaveInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder>(
-                  slaveInfo_,
+                  getSlaveInfo(),
                   getParentForChildren(),
                   isClean());
           slaveInfo_ = null;
@@ -31040,10 +30966,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ExecutorRegisteredMessage)
   }
 
-  public interface ExecutorReregisteredMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ExecutorReregisteredMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ExecutorReregisteredMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -31057,7 +30983,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.SlaveInfo slave_info = 2;
     /**
      * <code>required .mesos.SlaveInfo slave_info = 2;</code>
      */
@@ -31075,8 +31000,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ExecutorReregisteredMessage}
    */
   public static final class ExecutorReregisteredMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ExecutorReregisteredMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ExecutorReregisteredMessage)
+      ExecutorReregisteredMessageOrBuilder {
     // Use ExecutorReregisteredMessage.newBuilder() to construct.
     private ExecutorReregisteredMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -31188,7 +31114,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -31210,7 +31135,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.SlaveInfo slave_info = 2;
     public static final int SLAVE_INFO_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.SlaveInfo slaveInfo_;
     /**
@@ -31239,7 +31163,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -31369,8 +31294,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ExecutorReregisteredMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ExecutorReregisteredMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ExecutorReregisteredMessage)
+        mesos.internal.Messages.ExecutorReregisteredMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ExecutorReregisteredMessage_descriptor;
@@ -31526,7 +31452,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -31635,7 +31560,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -31643,7 +31568,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.SlaveInfo slave_info = 2;
       private org.apache.mesos.Protos.SlaveInfo slaveInfo_ = org.apache.mesos.Protos.SlaveInfo.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder> slaveInfoBuilder_;
@@ -31752,7 +31676,7 @@ public final class Messages {
         if (slaveInfoBuilder_ == null) {
           slaveInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveInfo, org.apache.mesos.Protos.SlaveInfo.Builder, org.apache.mesos.Protos.SlaveInfoOrBuilder>(
-                  slaveInfo_,
+                  getSlaveInfo(),
                   getParentForChildren(),
                   isClean());
           slaveInfo_ = null;
@@ -31771,10 +31695,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ExecutorReregisteredMessage)
   }
 
-  public interface ExitedExecutorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ExitedExecutorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ExitedExecutorMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -31788,7 +31712,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.SlaveIDOrBuilder getSlaveIdOrBuilder();
 
-    // required .mesos.FrameworkID framework_id = 2;
     /**
      * <code>required .mesos.FrameworkID framework_id = 2;</code>
      */
@@ -31802,7 +31725,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // required .mesos.ExecutorID executor_id = 3;
     /**
      * <code>required .mesos.ExecutorID executor_id = 3;</code>
      */
@@ -31816,7 +31738,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.ExecutorIDOrBuilder getExecutorIdOrBuilder();
 
-    // required int32 status = 4;
     /**
      * <code>required int32 status = 4;</code>
      */
@@ -31830,8 +31751,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ExitedExecutorMessage}
    */
   public static final class ExitedExecutorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ExitedExecutorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ExitedExecutorMessage)
+      ExitedExecutorMessageOrBuilder {
     // Use ExitedExecutorMessage.newBuilder() to construct.
     private ExitedExecutorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -31961,7 +31883,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -31983,7 +31904,6 @@ public final class Messages {
       return slaveId_;
     }
 
-    // required .mesos.FrameworkID framework_id = 2;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -32005,7 +31925,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // required .mesos.ExecutorID executor_id = 3;
     public static final int EXECUTOR_ID_FIELD_NUMBER = 3;
     private org.apache.mesos.Protos.ExecutorID executorId_;
     /**
@@ -32027,7 +31946,6 @@ public final class Messages {
       return executorId_;
     }
 
-    // required int32 status = 4;
     public static final int STATUS_FIELD_NUMBER = 4;
     private int status_;
     /**
@@ -32052,7 +31970,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -32208,8 +32127,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ExitedExecutorMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ExitedExecutorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ExitedExecutorMessage)
+        mesos.internal.Messages.ExitedExecutorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ExitedExecutorMessage_descriptor;
@@ -32404,7 +32324,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -32513,7 +32432,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -32521,7 +32440,6 @@ public final class Messages {
         return slaveIdBuilder_;
       }
 
-      // required .mesos.FrameworkID framework_id = 2;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -32630,7 +32548,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -32638,7 +32556,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // required .mesos.ExecutorID executor_id = 3;
       private org.apache.mesos.Protos.ExecutorID executorId_ = org.apache.mesos.Protos.ExecutorID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder> executorIdBuilder_;
@@ -32747,7 +32664,7 @@ public final class Messages {
         if (executorIdBuilder_ == null) {
           executorIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder>(
-                  executorId_,
+                  getExecutorId(),
                   getParentForChildren(),
                   isClean());
           executorId_ = null;
@@ -32755,7 +32672,6 @@ public final class Messages {
         return executorIdBuilder_;
       }
 
-      // required int32 status = 4;
       private int status_ ;
       /**
        * <code>required int32 status = 4;</code>
@@ -32799,10 +32715,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ExitedExecutorMessage)
   }
 
-  public interface ReconnectExecutorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ReconnectExecutorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ReconnectExecutorMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.SlaveID slave_id = 1;
     /**
      * <code>required .mesos.SlaveID slave_id = 1;</code>
      */
@@ -32820,8 +32736,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ReconnectExecutorMessage}
    */
   public static final class ReconnectExecutorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ReconnectExecutorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ReconnectExecutorMessage)
+      ReconnectExecutorMessageOrBuilder {
     // Use ReconnectExecutorMessage.newBuilder() to construct.
     private ReconnectExecutorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -32920,7 +32837,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.SlaveID slave_id = 1;
     public static final int SLAVE_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.SlaveID slaveId_;
     /**
@@ -32948,7 +32864,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasSlaveId()) {
         memoizedIsInitialized = 0;
@@ -33063,8 +32980,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ReconnectExecutorMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ReconnectExecutorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ReconnectExecutorMessage)
+        mesos.internal.Messages.ReconnectExecutorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ReconnectExecutorMessage_descriptor;
@@ -33194,7 +33112,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.SlaveID slave_id = 1;
       private org.apache.mesos.Protos.SlaveID slaveId_ = org.apache.mesos.Protos.SlaveID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder> slaveIdBuilder_;
@@ -33303,7 +33220,7 @@ public final class Messages {
         if (slaveIdBuilder_ == null) {
           slaveIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.SlaveID, org.apache.mesos.Protos.SlaveID.Builder, org.apache.mesos.Protos.SlaveIDOrBuilder>(
-                  slaveId_,
+                  getSlaveId(),
                   getParentForChildren(),
                   isClean());
           slaveId_ = null;
@@ -33322,10 +33239,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ReconnectExecutorMessage)
   }
 
-  public interface ReregisterExecutorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ReregisterExecutorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ReregisterExecutorMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.ExecutorID executor_id = 1;
     /**
      * <code>required .mesos.ExecutorID executor_id = 1;</code>
      */
@@ -33339,7 +33256,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.ExecutorIDOrBuilder getExecutorIdOrBuilder();
 
-    // required .mesos.FrameworkID framework_id = 2;
     /**
      * <code>required .mesos.FrameworkID framework_id = 2;</code>
      */
@@ -33353,7 +33269,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.FrameworkIDOrBuilder getFrameworkIdOrBuilder();
 
-    // repeated .mesos.TaskInfo tasks = 3;
     /**
      * <code>repeated .mesos.TaskInfo tasks = 3;</code>
      */
@@ -33378,7 +33293,6 @@ public final class Messages {
     org.apache.mesos.Protos.TaskInfoOrBuilder getTasksOrBuilder(
         int index);
 
-    // repeated .mesos.internal.StatusUpdate updates = 4;
     /**
      * <code>repeated .mesos.internal.StatusUpdate updates = 4;</code>
      */
@@ -33407,8 +33321,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ReregisterExecutorMessage}
    */
   public static final class ReregisterExecutorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ReregisterExecutorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ReregisterExecutorMessage)
+      ReregisterExecutorMessageOrBuilder {
     // Use ReregisterExecutorMessage.newBuilder() to construct.
     private ReregisterExecutorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -33542,7 +33457,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.ExecutorID executor_id = 1;
     public static final int EXECUTOR_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.ExecutorID executorId_;
     /**
@@ -33564,7 +33478,6 @@ public final class Messages {
       return executorId_;
     }
 
-    // required .mesos.FrameworkID framework_id = 2;
     public static final int FRAMEWORK_ID_FIELD_NUMBER = 2;
     private org.apache.mesos.Protos.FrameworkID frameworkId_;
     /**
@@ -33586,7 +33499,6 @@ public final class Messages {
       return frameworkId_;
     }
 
-    // repeated .mesos.TaskInfo tasks = 3;
     public static final int TASKS_FIELD_NUMBER = 3;
     private java.util.List<org.apache.mesos.Protos.TaskInfo> tasks_;
     /**
@@ -33622,7 +33534,6 @@ public final class Messages {
       return tasks_.get(index);
     }
 
-    // repeated .mesos.internal.StatusUpdate updates = 4;
     public static final int UPDATES_FIELD_NUMBER = 4;
     private java.util.List<mesos.internal.Messages.StatusUpdate> updates_;
     /**
@@ -33667,7 +33578,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasExecutorId()) {
         memoizedIsInitialized = 0;
@@ -33823,8 +33735,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ReregisterExecutorMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ReregisterExecutorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ReregisterExecutorMessage)
+        mesos.internal.Messages.ReregisterExecutorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ReregisterExecutorMessage_descriptor;
@@ -34076,7 +33989,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.ExecutorID executor_id = 1;
       private org.apache.mesos.Protos.ExecutorID executorId_ = org.apache.mesos.Protos.ExecutorID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder> executorIdBuilder_;
@@ -34185,7 +34097,7 @@ public final class Messages {
         if (executorIdBuilder_ == null) {
           executorIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.ExecutorID, org.apache.mesos.Protos.ExecutorID.Builder, org.apache.mesos.Protos.ExecutorIDOrBuilder>(
-                  executorId_,
+                  getExecutorId(),
                   getParentForChildren(),
                   isClean());
           executorId_ = null;
@@ -34193,7 +34105,6 @@ public final class Messages {
         return executorIdBuilder_;
       }
 
-      // required .mesos.FrameworkID framework_id = 2;
       private org.apache.mesos.Protos.FrameworkID frameworkId_ = org.apache.mesos.Protos.FrameworkID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder> frameworkIdBuilder_;
@@ -34302,7 +34213,7 @@ public final class Messages {
         if (frameworkIdBuilder_ == null) {
           frameworkIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.FrameworkID, org.apache.mesos.Protos.FrameworkID.Builder, org.apache.mesos.Protos.FrameworkIDOrBuilder>(
-                  frameworkId_,
+                  getFrameworkId(),
                   getParentForChildren(),
                   isClean());
           frameworkId_ = null;
@@ -34310,7 +34221,6 @@ public final class Messages {
         return frameworkIdBuilder_;
       }
 
-      // repeated .mesos.TaskInfo tasks = 3;
       private java.util.List<org.apache.mesos.Protos.TaskInfo> tasks_ =
         java.util.Collections.emptyList();
       private void ensureTasksIsMutable() {
@@ -34452,7 +34362,8 @@ public final class Messages {
           java.lang.Iterable<? extends org.apache.mesos.Protos.TaskInfo> values) {
         if (tasksBuilder_ == null) {
           ensureTasksIsMutable();
-          super.addAll(values, tasks_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tasks_);
           onChanged();
         } else {
           tasksBuilder_.addAllMessages(values);
@@ -34550,7 +34461,6 @@ public final class Messages {
         return tasksBuilder_;
       }
 
-      // repeated .mesos.internal.StatusUpdate updates = 4;
       private java.util.List<mesos.internal.Messages.StatusUpdate> updates_ =
         java.util.Collections.emptyList();
       private void ensureUpdatesIsMutable() {
@@ -34692,7 +34602,8 @@ public final class Messages {
           java.lang.Iterable<? extends mesos.internal.Messages.StatusUpdate> values) {
         if (updatesBuilder_ == null) {
           ensureUpdatesIsMutable();
-          super.addAll(values, updates_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, updates_);
           onChanged();
         } else {
           updatesBuilder_.addAllMessages(values);
@@ -34801,10 +34712,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ReregisterExecutorMessage)
   }
 
-  public interface ShutdownMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ShutdownMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.ShutdownMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string message = 1;
     /**
      * <code>optional string message = 1;</code>
      */
@@ -34823,8 +34734,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.ShutdownMessage}
    */
   public static final class ShutdownMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements ShutdownMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.ShutdownMessage)
+      ShutdownMessageOrBuilder {
     // Use ShutdownMessage.newBuilder() to construct.
     private ShutdownMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -34871,8 +34783,9 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              message_ = input.readBytes();
+              message_ = bs;
               break;
             }
           }
@@ -34915,7 +34828,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // optional string message = 1;
     public static final int MESSAGE_FIELD_NUMBER = 1;
     private java.lang.Object message_;
     /**
@@ -34964,7 +34876,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -35071,8 +34984,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.ShutdownMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ShutdownMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.ShutdownMessage)
+        mesos.internal.Messages.ShutdownMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_ShutdownMessage_descriptor;
@@ -35187,7 +35101,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // optional string message = 1;
       private java.lang.Object message_ = "";
       /**
        * <code>optional string message = 1;</code>
@@ -35201,9 +35114,12 @@ public final class Messages {
       public java.lang.String getMessage() {
         java.lang.Object ref = message_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          message_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            message_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -35272,10 +35188,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.ShutdownMessage)
   }
 
-  public interface AuthenticateMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AuthenticateMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.AuthenticateMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string pid = 1;
     /**
      * <code>required string pid = 1;</code>
      *
@@ -35306,8 +35222,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.AuthenticateMessage}
    */
   public static final class AuthenticateMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements AuthenticateMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.AuthenticateMessage)
+      AuthenticateMessageOrBuilder {
     // Use AuthenticateMessage.newBuilder() to construct.
     private AuthenticateMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -35354,8 +35271,9 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              pid_ = input.readBytes();
+              pid_ = bs;
               break;
             }
           }
@@ -35398,7 +35316,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required string pid = 1;
     public static final int PID_FIELD_NUMBER = 1;
     private java.lang.Object pid_;
     /**
@@ -35459,7 +35376,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasPid()) {
         memoizedIsInitialized = 0;
@@ -35570,8 +35488,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.AuthenticateMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.AuthenticateMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.AuthenticateMessage)
+        mesos.internal.Messages.AuthenticateMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_AuthenticateMessage_descriptor;
@@ -35690,7 +35609,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required string pid = 1;
       private java.lang.Object pid_ = "";
       /**
        * <code>required string pid = 1;</code>
@@ -35712,9 +35630,12 @@ public final class Messages {
       public java.lang.String getPid() {
         java.lang.Object ref = pid_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          pid_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            pid_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -35799,10 +35720,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.AuthenticateMessage)
   }
 
-  public interface AuthenticationMechanismsMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AuthenticationMechanismsMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.AuthenticationMechanismsMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // repeated string mechanisms = 1;
     /**
      * <code>repeated string mechanisms = 1;</code>
      *
@@ -35810,8 +35731,8 @@ public final class Messages {
      * List of available SASL mechanisms.
      * </pre>
      */
-    java.util.List<java.lang.String>
-    getMechanismsList();
+    com.google.protobuf.ProtocolStringList
+        getMechanismsList();
     /**
      * <code>repeated string mechanisms = 1;</code>
      *
@@ -35842,8 +35763,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.AuthenticationMechanismsMessage}
    */
   public static final class AuthenticationMechanismsMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements AuthenticationMechanismsMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.AuthenticationMechanismsMessage)
+      AuthenticationMechanismsMessageOrBuilder {
     // Use AuthenticationMechanismsMessage.newBuilder() to construct.
     private AuthenticationMechanismsMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -35890,11 +35812,12 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
                 mechanisms_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
-              mechanisms_.add(input.readBytes());
+              mechanisms_.add(bs);
               break;
             }
           }
@@ -35906,7 +35829,7 @@ public final class Messages {
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-          mechanisms_ = new com.google.protobuf.UnmodifiableLazyStringList(mechanisms_);
+          mechanisms_ = mechanisms_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -35939,7 +35862,6 @@ public final class Messages {
       return PARSER;
     }
 
-    // repeated string mechanisms = 1;
     public static final int MECHANISMS_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList mechanisms_;
     /**
@@ -35949,7 +35871,7 @@ public final class Messages {
      * List of available SASL mechanisms.
      * </pre>
      */
-    public java.util.List<java.lang.String>
+    public com.google.protobuf.ProtocolStringList
         getMechanismsList() {
       return mechanisms_;
     }
@@ -35991,7 +35913,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -36103,8 +36026,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.AuthenticationMechanismsMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.AuthenticationMechanismsMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.AuthenticationMechanismsMessage)
+        mesos.internal.Messages.AuthenticationMechanismsMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_AuthenticationMechanismsMessage_descriptor;
@@ -36167,8 +36091,7 @@ public final class Messages {
         mesos.internal.Messages.AuthenticationMechanismsMessage result = new mesos.internal.Messages.AuthenticationMechanismsMessage(this);
         int from_bitField0_ = bitField0_;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          mechanisms_ = new com.google.protobuf.UnmodifiableLazyStringList(
-              mechanisms_);
+          mechanisms_ = mechanisms_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.mechanisms_ = mechanisms_;
@@ -36224,7 +36147,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // repeated string mechanisms = 1;
       private com.google.protobuf.LazyStringList mechanisms_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureMechanismsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -36239,9 +36161,9 @@ public final class Messages {
        * List of available SASL mechanisms.
        * </pre>
        */
-      public java.util.List<java.lang.String>
+      public com.google.protobuf.ProtocolStringList
           getMechanismsList() {
-        return java.util.Collections.unmodifiableList(mechanisms_);
+        return mechanisms_.getUnmodifiableView();
       }
       /**
        * <code>repeated string mechanisms = 1;</code>
@@ -36318,7 +36240,8 @@ public final class Messages {
       public Builder addAllMechanisms(
           java.lang.Iterable<java.lang.String> values) {
         ensureMechanismsIsMutable();
-        super.addAll(values, mechanisms_);
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, mechanisms_);
         onChanged();
         return this;
       }
@@ -36364,10 +36287,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.AuthenticationMechanismsMessage)
   }
 
-  public interface AuthenticationStartMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AuthenticationStartMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.AuthenticationStartMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required string mechanism = 1;
     /**
      * <code>required string mechanism = 1;</code>
      */
@@ -36382,7 +36305,6 @@ public final class Messages {
     com.google.protobuf.ByteString
         getMechanismBytes();
 
-    // optional string data = 2;
     /**
      * <code>optional string data = 2;</code>
      */
@@ -36401,8 +36323,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.AuthenticationStartMessage}
    */
   public static final class AuthenticationStartMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements AuthenticationStartMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.AuthenticationStartMessage)
+      AuthenticationStartMessageOrBuilder {
     // Use AuthenticationStartMessage.newBuilder() to construct.
     private AuthenticationStartMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -36449,13 +36372,15 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              mechanism_ = input.readBytes();
+              mechanism_ = bs;
               break;
             }
             case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
-              data_ = input.readBytes();
+              data_ = bs;
               break;
             }
           }
@@ -36498,7 +36423,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required string mechanism = 1;
     public static final int MECHANISM_FIELD_NUMBER = 1;
     private java.lang.Object mechanism_;
     /**
@@ -36541,7 +36465,6 @@ public final class Messages {
       }
     }
 
-    // optional string data = 2;
     public static final int DATA_FIELD_NUMBER = 2;
     private java.lang.Object data_;
     /**
@@ -36591,7 +36514,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasMechanism()) {
         memoizedIsInitialized = 0;
@@ -36709,8 +36633,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.AuthenticationStartMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.AuthenticationStartMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.AuthenticationStartMessage)
+        mesos.internal.Messages.AuthenticationStartMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_AuthenticationStartMessage_descriptor;
@@ -36840,7 +36765,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required string mechanism = 1;
       private java.lang.Object mechanism_ = "";
       /**
        * <code>required string mechanism = 1;</code>
@@ -36854,9 +36778,12 @@ public final class Messages {
       public java.lang.String getMechanism() {
         java.lang.Object ref = mechanism_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          mechanism_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            mechanism_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -36914,7 +36841,6 @@ public final class Messages {
         return this;
       }
 
-      // optional string data = 2;
       private java.lang.Object data_ = "";
       /**
        * <code>optional string data = 2;</code>
@@ -36928,9 +36854,12 @@ public final class Messages {
       public java.lang.String getData() {
         java.lang.Object ref = data_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          data_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            data_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -36999,10 +36928,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.AuthenticationStartMessage)
   }
 
-  public interface AuthenticationStepMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AuthenticationStepMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.AuthenticationStepMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required bytes data = 1;
     /**
      * <code>required bytes data = 1;</code>
      */
@@ -37016,8 +36945,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.AuthenticationStepMessage}
    */
   public static final class AuthenticationStepMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements AuthenticationStepMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.AuthenticationStepMessage)
+      AuthenticationStepMessageOrBuilder {
     // Use AuthenticationStepMessage.newBuilder() to construct.
     private AuthenticationStepMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -37108,7 +37038,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required bytes data = 1;
     public static final int DATA_FIELD_NUMBER = 1;
     private com.google.protobuf.ByteString data_;
     /**
@@ -37130,7 +37059,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasData()) {
         memoizedIsInitialized = 0;
@@ -37241,8 +37171,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.AuthenticationStepMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.AuthenticationStepMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.AuthenticationStepMessage)
+        mesos.internal.Messages.AuthenticationStepMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_AuthenticationStepMessage_descriptor;
@@ -37359,7 +37290,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required bytes data = 1;
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>required bytes data = 1;</code>
@@ -37406,15 +37336,17 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.AuthenticationStepMessage)
   }
 
-  public interface AuthenticationCompletedMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AuthenticationCompletedMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.AuthenticationCompletedMessage)
+      com.google.protobuf.MessageOrBuilder {
   }
   /**
    * Protobuf type {@code mesos.internal.AuthenticationCompletedMessage}
    */
   public static final class AuthenticationCompletedMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements AuthenticationCompletedMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.AuthenticationCompletedMessage)
+      AuthenticationCompletedMessageOrBuilder {
     // Use AuthenticationCompletedMessage.newBuilder() to construct.
     private AuthenticationCompletedMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -37503,7 +37435,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -37603,8 +37536,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.AuthenticationCompletedMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.AuthenticationCompletedMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.AuthenticationCompletedMessage)
+        mesos.internal.Messages.AuthenticationCompletedMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_AuthenticationCompletedMessage_descriptor;
@@ -37715,15 +37649,17 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.AuthenticationCompletedMessage)
   }
 
-  public interface AuthenticationFailedMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AuthenticationFailedMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.AuthenticationFailedMessage)
+      com.google.protobuf.MessageOrBuilder {
   }
   /**
    * Protobuf type {@code mesos.internal.AuthenticationFailedMessage}
    */
   public static final class AuthenticationFailedMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements AuthenticationFailedMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.AuthenticationFailedMessage)
+      AuthenticationFailedMessageOrBuilder {
     // Use AuthenticationFailedMessage.newBuilder() to construct.
     private AuthenticationFailedMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -37812,7 +37748,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -37912,8 +37849,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.AuthenticationFailedMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.AuthenticationFailedMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.AuthenticationFailedMessage)
+        mesos.internal.Messages.AuthenticationFailedMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_AuthenticationFailedMessage_descriptor;
@@ -38024,10 +37962,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.AuthenticationFailedMessage)
   }
 
-  public interface AuthenticationErrorMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface AuthenticationErrorMessageOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.AuthenticationErrorMessage)
+      com.google.protobuf.MessageOrBuilder {
 
-    // optional string error = 1;
     /**
      * <code>optional string error = 1;</code>
      */
@@ -38046,8 +37984,9 @@ public final class Messages {
    * Protobuf type {@code mesos.internal.AuthenticationErrorMessage}
    */
   public static final class AuthenticationErrorMessage extends
-      com.google.protobuf.GeneratedMessage
-      implements AuthenticationErrorMessageOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.AuthenticationErrorMessage)
+      AuthenticationErrorMessageOrBuilder {
     // Use AuthenticationErrorMessage.newBuilder() to construct.
     private AuthenticationErrorMessage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -38094,8 +38033,9 @@ public final class Messages {
               break;
             }
             case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
-              error_ = input.readBytes();
+              error_ = bs;
               break;
             }
           }
@@ -38138,7 +38078,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // optional string error = 1;
     public static final int ERROR_FIELD_NUMBER = 1;
     private java.lang.Object error_;
     /**
@@ -38187,7 +38126,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       memoizedIsInitialized = 1;
       return true;
@@ -38294,8 +38234,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.AuthenticationErrorMessage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.AuthenticationErrorMessageOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.AuthenticationErrorMessage)
+        mesos.internal.Messages.AuthenticationErrorMessageOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_AuthenticationErrorMessage_descriptor;
@@ -38410,7 +38351,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // optional string error = 1;
       private java.lang.Object error_ = "";
       /**
        * <code>optional string error = 1;</code>
@@ -38424,9 +38364,12 @@ public final class Messages {
       public java.lang.String getError() {
         java.lang.Object ref = error_;
         if (!(ref instanceof java.lang.String)) {
-          java.lang.String s = ((com.google.protobuf.ByteString) ref)
-              .toStringUtf8();
-          error_ = s;
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            error_ = s;
+          }
           return s;
         } else {
           return (java.lang.String) ref;
@@ -38495,10 +38438,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.AuthenticationErrorMessage)
   }
 
-  public interface ArchiveOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ArchiveOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.Archive)
+      com.google.protobuf.MessageOrBuilder {
 
-    // repeated .mesos.internal.Archive.Framework frameworks = 1;
     /**
      * <code>repeated .mesos.internal.Archive.Framework frameworks = 1;</code>
      */
@@ -38532,8 +38475,9 @@ public final class Messages {
    * </pre>
    */
   public static final class Archive extends
-      com.google.protobuf.GeneratedMessage
-      implements ArchiveOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.Archive)
+      ArchiveOrBuilder {
     // Use Archive.newBuilder() to construct.
     private Archive(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -38629,10 +38573,10 @@ public final class Messages {
       return PARSER;
     }
 
-    public interface FrameworkOrBuilder
-        extends com.google.protobuf.MessageOrBuilder {
+    public interface FrameworkOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mesos.internal.Archive.Framework)
+        com.google.protobuf.MessageOrBuilder {
 
-      // required .mesos.FrameworkInfo framework_info = 1;
       /**
        * <code>required .mesos.FrameworkInfo framework_info = 1;</code>
        */
@@ -38646,7 +38590,6 @@ public final class Messages {
        */
       org.apache.mesos.Protos.FrameworkInfoOrBuilder getFrameworkInfoOrBuilder();
 
-      // optional string pid = 2;
       /**
        * <code>optional string pid = 2;</code>
        */
@@ -38661,7 +38604,6 @@ public final class Messages {
       com.google.protobuf.ByteString
           getPidBytes();
 
-      // repeated .mesos.internal.Task tasks = 3;
       /**
        * <code>repeated .mesos.internal.Task tasks = 3;</code>
        */
@@ -38690,8 +38632,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.Archive.Framework}
      */
     public static final class Framework extends
-        com.google.protobuf.GeneratedMessage
-        implements FrameworkOrBuilder {
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:mesos.internal.Archive.Framework)
+        FrameworkOrBuilder {
       // Use Framework.newBuilder() to construct.
       private Framework(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
@@ -38751,8 +38694,9 @@ public final class Messages {
                 break;
               }
               case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
-                pid_ = input.readBytes();
+                pid_ = bs;
                 break;
               }
               case 26: {
@@ -38806,7 +38750,6 @@ public final class Messages {
       }
 
       private int bitField0_;
-      // required .mesos.FrameworkInfo framework_info = 1;
       public static final int FRAMEWORK_INFO_FIELD_NUMBER = 1;
       private org.apache.mesos.Protos.FrameworkInfo frameworkInfo_;
       /**
@@ -38828,7 +38771,6 @@ public final class Messages {
         return frameworkInfo_;
       }
 
-      // optional string pid = 2;
       public static final int PID_FIELD_NUMBER = 2;
       private java.lang.Object pid_;
       /**
@@ -38871,7 +38813,6 @@ public final class Messages {
         }
       }
 
-      // repeated .mesos.internal.Task tasks = 3;
       public static final int TASKS_FIELD_NUMBER = 3;
       private java.util.List<mesos.internal.Messages.Task> tasks_;
       /**
@@ -38915,7 +38856,8 @@ public final class Messages {
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
-        if (isInitialized != -1) return isInitialized == 1;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
 
         if (!hasFrameworkInfo()) {
           memoizedIsInitialized = 0;
@@ -39050,8 +38992,9 @@ public final class Messages {
        * Protobuf type {@code mesos.internal.Archive.Framework}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder>
-         implements mesos.internal.Messages.Archive.FrameworkOrBuilder {
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mesos.internal.Archive.Framework)
+          mesos.internal.Messages.Archive.FrameworkOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return mesos.internal.Messages.internal_static_mesos_internal_Archive_Framework_descriptor;
@@ -39240,7 +39183,6 @@ public final class Messages {
         }
         private int bitField0_;
 
-        // required .mesos.FrameworkInfo framework_info = 1;
         private org.apache.mesos.Protos.FrameworkInfo frameworkInfo_ = org.apache.mesos.Protos.FrameworkInfo.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
             org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder> frameworkInfoBuilder_;
@@ -39349,7 +39291,7 @@ public final class Messages {
           if (frameworkInfoBuilder_ == null) {
             frameworkInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
                 org.apache.mesos.Protos.FrameworkInfo, org.apache.mesos.Protos.FrameworkInfo.Builder, org.apache.mesos.Protos.FrameworkInfoOrBuilder>(
-                    frameworkInfo_,
+                    getFrameworkInfo(),
                     getParentForChildren(),
                     isClean());
             frameworkInfo_ = null;
@@ -39357,7 +39299,6 @@ public final class Messages {
           return frameworkInfoBuilder_;
         }
 
-        // optional string pid = 2;
         private java.lang.Object pid_ = "";
         /**
          * <code>optional string pid = 2;</code>
@@ -39371,9 +39312,12 @@ public final class Messages {
         public java.lang.String getPid() {
           java.lang.Object ref = pid_;
           if (!(ref instanceof java.lang.String)) {
-            java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                .toStringUtf8();
-            pid_ = s;
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              pid_ = s;
+            }
             return s;
           } else {
             return (java.lang.String) ref;
@@ -39431,7 +39375,6 @@ public final class Messages {
           return this;
         }
 
-        // repeated .mesos.internal.Task tasks = 3;
         private java.util.List<mesos.internal.Messages.Task> tasks_ =
           java.util.Collections.emptyList();
         private void ensureTasksIsMutable() {
@@ -39573,7 +39516,8 @@ public final class Messages {
             java.lang.Iterable<? extends mesos.internal.Messages.Task> values) {
           if (tasksBuilder_ == null) {
             ensureTasksIsMutable();
-            super.addAll(values, tasks_);
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, tasks_);
             onChanged();
           } else {
             tasksBuilder_.addAllMessages(values);
@@ -39682,7 +39626,6 @@ public final class Messages {
       // @@protoc_insertion_point(class_scope:mesos.internal.Archive.Framework)
     }
 
-    // repeated .mesos.internal.Archive.Framework frameworks = 1;
     public static final int FRAMEWORKS_FIELD_NUMBER = 1;
     private java.util.List<mesos.internal.Messages.Archive.Framework> frameworks_;
     /**
@@ -39724,7 +39667,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       for (int i = 0; i < getFrameworksCount(); i++) {
         if (!getFrameworks(i).isInitialized()) {
@@ -39842,8 +39786,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ArchiveOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.Archive)
+        mesos.internal.Messages.ArchiveOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_Archive_descriptor;
@@ -39993,7 +39938,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // repeated .mesos.internal.Archive.Framework frameworks = 1;
       private java.util.List<mesos.internal.Messages.Archive.Framework> frameworks_ =
         java.util.Collections.emptyList();
       private void ensureFrameworksIsMutable() {
@@ -40135,7 +40079,8 @@ public final class Messages {
           java.lang.Iterable<? extends mesos.internal.Messages.Archive.Framework> values) {
         if (frameworksBuilder_ == null) {
           ensureFrameworksIsMutable();
-          super.addAll(values, frameworks_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, frameworks_);
           onChanged();
         } else {
           frameworksBuilder_.addAllMessages(values);
@@ -40244,10 +40189,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.Archive)
   }
 
-  public interface TaskHealthStatusOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface TaskHealthStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.TaskHealthStatus)
+      com.google.protobuf.MessageOrBuilder {
 
-    // required .mesos.TaskID task_id = 1;
     /**
      * <code>required .mesos.TaskID task_id = 1;</code>
      */
@@ -40261,7 +40206,6 @@ public final class Messages {
      */
     org.apache.mesos.Protos.TaskIDOrBuilder getTaskIdOrBuilder();
 
-    // required bool healthy = 2;
     /**
      * <code>required bool healthy = 2;</code>
      */
@@ -40271,7 +40215,6 @@ public final class Messages {
      */
     boolean getHealthy();
 
-    // optional bool kill_task = 3 [default = false];
     /**
      * <code>optional bool kill_task = 3 [default = false];</code>
      *
@@ -40289,7 +40232,6 @@ public final class Messages {
      */
     boolean getKillTask();
 
-    // optional int32 consecutive_failures = 4;
     /**
      * <code>optional int32 consecutive_failures = 4;</code>
      *
@@ -40322,8 +40264,9 @@ public final class Messages {
    * </pre>
    */
   public static final class TaskHealthStatus extends
-      com.google.protobuf.GeneratedMessage
-      implements TaskHealthStatusOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.TaskHealthStatus)
+      TaskHealthStatusOrBuilder {
     // Use TaskHealthStatus.newBuilder() to construct.
     private TaskHealthStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -40437,7 +40380,6 @@ public final class Messages {
     }
 
     private int bitField0_;
-    // required .mesos.TaskID task_id = 1;
     public static final int TASK_ID_FIELD_NUMBER = 1;
     private org.apache.mesos.Protos.TaskID taskId_;
     /**
@@ -40459,7 +40401,6 @@ public final class Messages {
       return taskId_;
     }
 
-    // required bool healthy = 2;
     public static final int HEALTHY_FIELD_NUMBER = 2;
     private boolean healthy_;
     /**
@@ -40475,7 +40416,6 @@ public final class Messages {
       return healthy_;
     }
 
-    // optional bool kill_task = 3 [default = false];
     public static final int KILL_TASK_FIELD_NUMBER = 3;
     private boolean killTask_;
     /**
@@ -40499,7 +40439,6 @@ public final class Messages {
       return killTask_;
     }
 
-    // optional int32 consecutive_failures = 4;
     public static final int CONSECUTIVE_FAILURES_FIELD_NUMBER = 4;
     private int consecutiveFailures_;
     /**
@@ -40534,7 +40473,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       if (!hasTaskId()) {
         memoizedIsInitialized = 0;
@@ -40683,8 +40623,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.TaskHealthStatusOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.TaskHealthStatus)
+        mesos.internal.Messages.TaskHealthStatusOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_TaskHealthStatus_descriptor;
@@ -40845,7 +40786,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // required .mesos.TaskID task_id = 1;
       private org.apache.mesos.Protos.TaskID taskId_ = org.apache.mesos.Protos.TaskID.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder> taskIdBuilder_;
@@ -40954,7 +40894,7 @@ public final class Messages {
         if (taskIdBuilder_ == null) {
           taskIdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
               org.apache.mesos.Protos.TaskID, org.apache.mesos.Protos.TaskID.Builder, org.apache.mesos.Protos.TaskIDOrBuilder>(
-                  taskId_,
+                  getTaskId(),
                   getParentForChildren(),
                   isClean());
           taskId_ = null;
@@ -40962,7 +40902,6 @@ public final class Messages {
         return taskIdBuilder_;
       }
 
-      // required bool healthy = 2;
       private boolean healthy_ ;
       /**
        * <code>required bool healthy = 2;</code>
@@ -40995,7 +40934,6 @@ public final class Messages {
         return this;
       }
 
-      // optional bool kill_task = 3 [default = false];
       private boolean killTask_ ;
       /**
        * <code>optional bool kill_task = 3 [default = false];</code>
@@ -41044,7 +40982,6 @@ public final class Messages {
         return this;
       }
 
-      // optional int32 consecutive_failures = 4;
       private int consecutiveFailures_ ;
       /**
        * <code>optional int32 consecutive_failures = 4;</code>
@@ -41108,10 +41045,10 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.TaskHealthStatus)
   }
 
-  public interface ModulesOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+  public interface ModulesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:mesos.internal.Modules)
+      com.google.protobuf.MessageOrBuilder {
 
-    // repeated .mesos.internal.Modules.Library libraries = 1;
     /**
      * <code>repeated .mesos.internal.Modules.Library libraries = 1;</code>
      */
@@ -41144,8 +41081,9 @@ public final class Messages {
    * </pre>
    */
   public static final class Modules extends
-      com.google.protobuf.GeneratedMessage
-      implements ModulesOrBuilder {
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:mesos.internal.Modules)
+      ModulesOrBuilder {
     // Use Modules.newBuilder() to construct.
     private Modules(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
@@ -41241,10 +41179,10 @@ public final class Messages {
       return PARSER;
     }
 
-    public interface LibraryOrBuilder
-        extends com.google.protobuf.MessageOrBuilder {
+    public interface LibraryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:mesos.internal.Modules.Library)
+        com.google.protobuf.MessageOrBuilder {
 
-      // optional string file = 1;
       /**
        * <code>optional string file = 1;</code>
        *
@@ -41277,7 +41215,6 @@ public final class Messages {
       com.google.protobuf.ByteString
           getFileBytes();
 
-      // optional string name = 2;
       /**
        * <code>optional string name = 2;</code>
        *
@@ -41307,7 +41244,6 @@ public final class Messages {
       com.google.protobuf.ByteString
           getNameBytes();
 
-      // repeated .mesos.internal.Modules.Library.Module modules = 3;
       /**
        * <code>repeated .mesos.internal.Modules.Library.Module modules = 3;</code>
        */
@@ -41336,8 +41272,9 @@ public final class Messages {
      * Protobuf type {@code mesos.internal.Modules.Library}
      */
     public static final class Library extends
-        com.google.protobuf.GeneratedMessage
-        implements LibraryOrBuilder {
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:mesos.internal.Modules.Library)
+        LibraryOrBuilder {
       // Use Library.newBuilder() to construct.
       private Library(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
@@ -41384,13 +41321,15 @@ public final class Messages {
                 break;
               }
               case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
-                file_ = input.readBytes();
+                file_ = bs;
                 break;
               }
               case 18: {
+                com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
-                name_ = input.readBytes();
+                name_ = bs;
                 break;
               }
               case 26: {
@@ -41443,10 +41382,10 @@ public final class Messages {
         return PARSER;
       }
 
-      public interface ModuleOrBuilder
-          extends com.google.protobuf.MessageOrBuilder {
+      public interface ModuleOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:mesos.internal.Modules.Library.Module)
+          com.google.protobuf.MessageOrBuilder {
 
-        // optional string name = 1;
         /**
          * <code>optional string name = 1;</code>
          *
@@ -41473,7 +41412,6 @@ public final class Messages {
         com.google.protobuf.ByteString
             getNameBytes();
 
-        // repeated .mesos.Parameter parameters = 2;
         /**
          * <code>repeated .mesos.Parameter parameters = 2;</code>
          *
@@ -41522,8 +41460,9 @@ public final class Messages {
        * Protobuf type {@code mesos.internal.Modules.Library.Module}
        */
       public static final class Module extends
-          com.google.protobuf.GeneratedMessage
-          implements ModuleOrBuilder {
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:mesos.internal.Modules.Library.Module)
+          ModuleOrBuilder {
         // Use Module.newBuilder() to construct.
         private Module(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
           super(builder);
@@ -41570,8 +41509,9 @@ public final class Messages {
                   break;
                 }
                 case 10: {
+                  com.google.protobuf.ByteString bs = input.readBytes();
                   bitField0_ |= 0x00000001;
-                  name_ = input.readBytes();
+                  name_ = bs;
                   break;
                 }
                 case 18: {
@@ -41625,7 +41565,6 @@ public final class Messages {
         }
 
         private int bitField0_;
-        // optional string name = 1;
         public static final int NAME_FIELD_NUMBER = 1;
         private java.lang.Object name_;
         /**
@@ -41680,7 +41619,6 @@ public final class Messages {
           }
         }
 
-        // repeated .mesos.Parameter parameters = 2;
         public static final int PARAMETERS_FIELD_NUMBER = 2;
         private java.util.List<org.apache.mesos.Protos.Parameter> parameters_;
         /**
@@ -41743,7 +41681,8 @@ public final class Messages {
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
           byte isInitialized = memoizedIsInitialized;
-          if (isInitialized != -1) return isInitialized == 1;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
 
           for (int i = 0; i < getParametersCount(); i++) {
             if (!getParameters(i).isInitialized()) {
@@ -41863,8 +41802,9 @@ public final class Messages {
          * Protobuf type {@code mesos.internal.Modules.Library.Module}
          */
         public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder>
-           implements mesos.internal.Messages.Modules.Library.ModuleOrBuilder {
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:mesos.internal.Modules.Library.Module)
+            mesos.internal.Messages.Modules.Library.ModuleOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
             return mesos.internal.Messages.internal_static_mesos_internal_Modules_Library_Module_descriptor;
@@ -42027,7 +41967,6 @@ public final class Messages {
           }
           private int bitField0_;
 
-          // optional string name = 1;
           private java.lang.Object name_ = "";
           /**
            * <code>optional string name = 1;</code>
@@ -42049,9 +41988,12 @@ public final class Messages {
           public java.lang.String getName() {
             java.lang.Object ref = name_;
             if (!(ref instanceof java.lang.String)) {
-              java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                  .toStringUtf8();
-              name_ = s;
+              com.google.protobuf.ByteString bs =
+                  (com.google.protobuf.ByteString) ref;
+              java.lang.String s = bs.toStringUtf8();
+              if (bs.isValidUtf8()) {
+                name_ = s;
+              }
               return s;
             } else {
               return (java.lang.String) ref;
@@ -42125,7 +42067,6 @@ public final class Messages {
             return this;
           }
 
-          // repeated .mesos.Parameter parameters = 2;
           private java.util.List<org.apache.mesos.Protos.Parameter> parameters_ =
             java.util.Collections.emptyList();
           private void ensureParametersIsMutable() {
@@ -42307,7 +42248,8 @@ public final class Messages {
               java.lang.Iterable<? extends org.apache.mesos.Protos.Parameter> values) {
             if (parametersBuilder_ == null) {
               ensureParametersIsMutable();
-              super.addAll(values, parameters_);
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, parameters_);
               onChanged();
             } else {
               parametersBuilder_.addAllMessages(values);
@@ -42449,7 +42391,6 @@ public final class Messages {
       }
 
       private int bitField0_;
-      // optional string file = 1;
       public static final int FILE_FIELD_NUMBER = 1;
       private java.lang.Object file_;
       /**
@@ -42510,7 +42451,6 @@ public final class Messages {
         }
       }
 
-      // optional string name = 2;
       public static final int NAME_FIELD_NUMBER = 2;
       private java.lang.Object name_;
       /**
@@ -42568,7 +42508,6 @@ public final class Messages {
         }
       }
 
-      // repeated .mesos.internal.Modules.Library.Module modules = 3;
       public static final int MODULES_FIELD_NUMBER = 3;
       private java.util.List<mesos.internal.Messages.Modules.Library.Module> modules_;
       /**
@@ -42612,7 +42551,8 @@ public final class Messages {
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
         byte isInitialized = memoizedIsInitialized;
-        if (isInitialized != -1) return isInitialized == 1;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
 
         for (int i = 0; i < getModulesCount(); i++) {
           if (!getModules(i).isInitialized()) {
@@ -42739,8 +42679,9 @@ public final class Messages {
        * Protobuf type {@code mesos.internal.Modules.Library}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder>
-         implements mesos.internal.Messages.Modules.LibraryOrBuilder {
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:mesos.internal.Modules.Library)
+          mesos.internal.Messages.Modules.LibraryOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return mesos.internal.Messages.internal_static_mesos_internal_Modules_Library_descriptor;
@@ -42914,7 +42855,6 @@ public final class Messages {
         }
         private int bitField0_;
 
-        // optional string file = 1;
         private java.lang.Object file_ = "";
         /**
          * <code>optional string file = 1;</code>
@@ -42940,9 +42880,12 @@ public final class Messages {
         public java.lang.String getFile() {
           java.lang.Object ref = file_;
           if (!(ref instanceof java.lang.String)) {
-            java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                .toStringUtf8();
-            file_ = s;
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              file_ = s;
+            }
             return s;
           } else {
             return (java.lang.String) ref;
@@ -43024,7 +42967,6 @@ public final class Messages {
           return this;
         }
 
-        // optional string name = 2;
         private java.lang.Object name_ = "";
         /**
          * <code>optional string name = 2;</code>
@@ -43048,9 +42990,12 @@ public final class Messages {
         public java.lang.String getName() {
           java.lang.Object ref = name_;
           if (!(ref instanceof java.lang.String)) {
-            java.lang.String s = ((com.google.protobuf.ByteString) ref)
-                .toStringUtf8();
-            name_ = s;
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              name_ = s;
+            }
             return s;
           } else {
             return (java.lang.String) ref;
@@ -43128,7 +43073,6 @@ public final class Messages {
           return this;
         }
 
-        // repeated .mesos.internal.Modules.Library.Module modules = 3;
         private java.util.List<mesos.internal.Messages.Modules.Library.Module> modules_ =
           java.util.Collections.emptyList();
         private void ensureModulesIsMutable() {
@@ -43270,7 +43214,8 @@ public final class Messages {
             java.lang.Iterable<? extends mesos.internal.Messages.Modules.Library.Module> values) {
           if (modulesBuilder_ == null) {
             ensureModulesIsMutable();
-            super.addAll(values, modules_);
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, modules_);
             onChanged();
           } else {
             modulesBuilder_.addAllMessages(values);
@@ -43379,7 +43324,6 @@ public final class Messages {
       // @@protoc_insertion_point(class_scope:mesos.internal.Modules.Library)
     }
 
-    // repeated .mesos.internal.Modules.Library libraries = 1;
     public static final int LIBRARIES_FIELD_NUMBER = 1;
     private java.util.List<mesos.internal.Messages.Modules.Library> libraries_;
     /**
@@ -43421,7 +43365,8 @@ public final class Messages {
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
 
       for (int i = 0; i < getLibrariesCount(); i++) {
         if (!getLibraries(i).isInitialized()) {
@@ -43538,8 +43483,9 @@ public final class Messages {
      * </pre>
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements mesos.internal.Messages.ModulesOrBuilder {
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:mesos.internal.Modules)
+        mesos.internal.Messages.ModulesOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return mesos.internal.Messages.internal_static_mesos_internal_Modules_descriptor;
@@ -43689,7 +43635,6 @@ public final class Messages {
       }
       private int bitField0_;
 
-      // repeated .mesos.internal.Modules.Library libraries = 1;
       private java.util.List<mesos.internal.Messages.Modules.Library> libraries_ =
         java.util.Collections.emptyList();
       private void ensureLibrariesIsMutable() {
@@ -43831,7 +43776,8 @@ public final class Messages {
           java.lang.Iterable<? extends mesos.internal.Messages.Modules.Library> values) {
         if (librariesBuilder_ == null) {
           ensureLibrariesIsMutable();
-          super.addAll(values, libraries_);
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, libraries_);
           onChanged();
         } else {
           librariesBuilder_.addAllMessages(values);
@@ -43940,282 +43886,282 @@ public final class Messages {
     // @@protoc_insertion_point(class_scope:mesos.internal.Modules)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_Task_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_Task_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_RoleInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_RoleInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_StatusUpdate_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_StatusUpdate_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_StatusUpdateRecord_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_StatusUpdateRecord_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_SubmitSchedulerRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_SubmitSchedulerRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_SubmitSchedulerResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_SubmitSchedulerResponse_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ExecutorToFrameworkMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ExecutorToFrameworkMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_FrameworkToExecutorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_FrameworkToExecutorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_RegisterFrameworkMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_RegisterFrameworkMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ReregisterFrameworkMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ReregisterFrameworkMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_FrameworkRegisteredMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_FrameworkRegisteredMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_FrameworkReregisteredMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_FrameworkReregisteredMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_UnregisterFrameworkMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_UnregisterFrameworkMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_DeactivateFrameworkMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_DeactivateFrameworkMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ResourceRequestMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ResourceRequestMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ResourceOffersMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ResourceOffersMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_LaunchTasksMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_LaunchTasksMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_RescindResourceOfferMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_RescindResourceOfferMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ReviveOffersMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ReviveOffersMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_RunTaskMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_RunTaskMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_KillTaskMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_KillTaskMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_StatusUpdateMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_StatusUpdateMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_LostSlaveMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_LostSlaveMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ReconcileTasksMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ReconcileTasksMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_FrameworkErrorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_FrameworkErrorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_RegisterSlaveMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_RegisterSlaveMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ReregisterSlaveMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ReregisterSlaveMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_SlaveRegisteredMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_SlaveRegisteredMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_SlaveReregisteredMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_SlaveReregisteredMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_UnregisterSlaveMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_UnregisterSlaveMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_PingSlaveMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_PingSlaveMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_PongSlaveMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_PongSlaveMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ShutdownFrameworkMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ShutdownFrameworkMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ShutdownExecutorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ShutdownExecutorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_UpdateFrameworkMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_UpdateFrameworkMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_RegisterExecutorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_RegisterExecutorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ExecutorRegisteredMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ExecutorRegisteredMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ExecutorReregisteredMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ExecutorReregisteredMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ExitedExecutorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ExitedExecutorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ReconnectExecutorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ReconnectExecutorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ReregisterExecutorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ReregisterExecutorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_ShutdownMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_ShutdownMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_AuthenticateMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_AuthenticateMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_AuthenticationMechanismsMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_AuthenticationMechanismsMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_AuthenticationStartMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_AuthenticationStartMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_AuthenticationStepMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_AuthenticationStepMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_AuthenticationCompletedMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_AuthenticationCompletedMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_AuthenticationFailedMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_AuthenticationFailedMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_AuthenticationErrorMessage_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_AuthenticationErrorMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_Archive_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_Archive_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_Archive_Framework_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_Archive_Framework_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_TaskHealthStatus_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_TaskHealthStatus_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_Modules_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_Modules_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_Modules_Library_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_mesos_internal_Modules_Library_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_mesos_internal_Modules_Library_Module_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -44286,7 +44232,7 @@ public final class Messages {
       "fer_id\030\001 \002(\0132\016.mesos.OfferID\"?\n\023ReviveOf" +
       "fersMessage\022(\n\014framework_id\030\001 \002(\0132\022.meso" +
       "s.FrameworkID\"\217\001\n\016RunTaskMessage\022(\n\014fram" +
-      "ework_id\030\001 \002(\0132\022.mesos.FrameworkID\022\'\n\tfr" +
+      "ework_id\030\001 \001(\0132\022.mesos.FrameworkID\022\'\n\tfr" +
       "amework\030\002 \002(\0132\024.mesos.FrameworkInfo\022\013\n\003p" +
       "id\030\003 \002(\t\022\035\n\004task\030\004 \002(\0132\017.mesos.TaskInfo\"",
       "[\n\017KillTaskMessage\022(\n\014framework_id\030\001 \002(\013" +
@@ -44368,354 +44314,355 @@ public final class Messages {
       "parameters\030\002 \003(\0132\020.mesos.Parameter"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_mesos_internal_Task_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_mesos_internal_Task_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_Task_descriptor,
-              new java.lang.String[] { "Name", "TaskId", "FrameworkId", "ExecutorId", "SlaveId", "State", "Resources", "Statuses", "StatusUpdateState", "StatusUpdateUuid", });
-          internal_static_mesos_internal_RoleInfo_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_mesos_internal_RoleInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_RoleInfo_descriptor,
-              new java.lang.String[] { "Name", "Weight", });
-          internal_static_mesos_internal_StatusUpdate_descriptor =
-            getDescriptor().getMessageTypes().get(2);
-          internal_static_mesos_internal_StatusUpdate_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_StatusUpdate_descriptor,
-              new java.lang.String[] { "FrameworkId", "ExecutorId", "SlaveId", "Status", "Timestamp", "Uuid", "LatestState", });
-          internal_static_mesos_internal_StatusUpdateRecord_descriptor =
-            getDescriptor().getMessageTypes().get(3);
-          internal_static_mesos_internal_StatusUpdateRecord_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_StatusUpdateRecord_descriptor,
-              new java.lang.String[] { "Type", "Update", "Uuid", });
-          internal_static_mesos_internal_SubmitSchedulerRequest_descriptor =
-            getDescriptor().getMessageTypes().get(4);
-          internal_static_mesos_internal_SubmitSchedulerRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_SubmitSchedulerRequest_descriptor,
-              new java.lang.String[] { "Name", });
-          internal_static_mesos_internal_SubmitSchedulerResponse_descriptor =
-            getDescriptor().getMessageTypes().get(5);
-          internal_static_mesos_internal_SubmitSchedulerResponse_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_SubmitSchedulerResponse_descriptor,
-              new java.lang.String[] { "Okay", });
-          internal_static_mesos_internal_ExecutorToFrameworkMessage_descriptor =
-            getDescriptor().getMessageTypes().get(6);
-          internal_static_mesos_internal_ExecutorToFrameworkMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ExecutorToFrameworkMessage_descriptor,
-              new java.lang.String[] { "SlaveId", "FrameworkId", "ExecutorId", "Data", });
-          internal_static_mesos_internal_FrameworkToExecutorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(7);
-          internal_static_mesos_internal_FrameworkToExecutorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_FrameworkToExecutorMessage_descriptor,
-              new java.lang.String[] { "SlaveId", "FrameworkId", "ExecutorId", "Data", });
-          internal_static_mesos_internal_RegisterFrameworkMessage_descriptor =
-            getDescriptor().getMessageTypes().get(8);
-          internal_static_mesos_internal_RegisterFrameworkMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_RegisterFrameworkMessage_descriptor,
-              new java.lang.String[] { "Framework", });
-          internal_static_mesos_internal_ReregisterFrameworkMessage_descriptor =
-            getDescriptor().getMessageTypes().get(9);
-          internal_static_mesos_internal_ReregisterFrameworkMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ReregisterFrameworkMessage_descriptor,
-              new java.lang.String[] { "Framework", "Failover", });
-          internal_static_mesos_internal_FrameworkRegisteredMessage_descriptor =
-            getDescriptor().getMessageTypes().get(10);
-          internal_static_mesos_internal_FrameworkRegisteredMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_FrameworkRegisteredMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "MasterInfo", });
-          internal_static_mesos_internal_FrameworkReregisteredMessage_descriptor =
-            getDescriptor().getMessageTypes().get(11);
-          internal_static_mesos_internal_FrameworkReregisteredMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_FrameworkReregisteredMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "MasterInfo", });
-          internal_static_mesos_internal_UnregisterFrameworkMessage_descriptor =
-            getDescriptor().getMessageTypes().get(12);
-          internal_static_mesos_internal_UnregisterFrameworkMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_UnregisterFrameworkMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", });
-          internal_static_mesos_internal_DeactivateFrameworkMessage_descriptor =
-            getDescriptor().getMessageTypes().get(13);
-          internal_static_mesos_internal_DeactivateFrameworkMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_DeactivateFrameworkMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", });
-          internal_static_mesos_internal_ResourceRequestMessage_descriptor =
-            getDescriptor().getMessageTypes().get(14);
-          internal_static_mesos_internal_ResourceRequestMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ResourceRequestMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "Requests", });
-          internal_static_mesos_internal_ResourceOffersMessage_descriptor =
-            getDescriptor().getMessageTypes().get(15);
-          internal_static_mesos_internal_ResourceOffersMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ResourceOffersMessage_descriptor,
-              new java.lang.String[] { "Offers", "Pids", });
-          internal_static_mesos_internal_LaunchTasksMessage_descriptor =
-            getDescriptor().getMessageTypes().get(16);
-          internal_static_mesos_internal_LaunchTasksMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_LaunchTasksMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "Tasks", "Filters", "OfferIds", });
-          internal_static_mesos_internal_RescindResourceOfferMessage_descriptor =
-            getDescriptor().getMessageTypes().get(17);
-          internal_static_mesos_internal_RescindResourceOfferMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_RescindResourceOfferMessage_descriptor,
-              new java.lang.String[] { "OfferId", });
-          internal_static_mesos_internal_ReviveOffersMessage_descriptor =
-            getDescriptor().getMessageTypes().get(18);
-          internal_static_mesos_internal_ReviveOffersMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ReviveOffersMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", });
-          internal_static_mesos_internal_RunTaskMessage_descriptor =
-            getDescriptor().getMessageTypes().get(19);
-          internal_static_mesos_internal_RunTaskMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_RunTaskMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "Framework", "Pid", "Task", });
-          internal_static_mesos_internal_KillTaskMessage_descriptor =
-            getDescriptor().getMessageTypes().get(20);
-          internal_static_mesos_internal_KillTaskMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_KillTaskMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "TaskId", });
-          internal_static_mesos_internal_StatusUpdateMessage_descriptor =
-            getDescriptor().getMessageTypes().get(21);
-          internal_static_mesos_internal_StatusUpdateMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_StatusUpdateMessage_descriptor,
-              new java.lang.String[] { "Update", "Pid", });
-          internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_descriptor =
-            getDescriptor().getMessageTypes().get(22);
-          internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_descriptor,
-              new java.lang.String[] { "SlaveId", "FrameworkId", "TaskId", "Uuid", });
-          internal_static_mesos_internal_LostSlaveMessage_descriptor =
-            getDescriptor().getMessageTypes().get(23);
-          internal_static_mesos_internal_LostSlaveMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_LostSlaveMessage_descriptor,
-              new java.lang.String[] { "SlaveId", });
-          internal_static_mesos_internal_ReconcileTasksMessage_descriptor =
-            getDescriptor().getMessageTypes().get(24);
-          internal_static_mesos_internal_ReconcileTasksMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ReconcileTasksMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "Statuses", });
-          internal_static_mesos_internal_FrameworkErrorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(25);
-          internal_static_mesos_internal_FrameworkErrorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_FrameworkErrorMessage_descriptor,
-              new java.lang.String[] { "Message", });
-          internal_static_mesos_internal_RegisterSlaveMessage_descriptor =
-            getDescriptor().getMessageTypes().get(26);
-          internal_static_mesos_internal_RegisterSlaveMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_RegisterSlaveMessage_descriptor,
-              new java.lang.String[] { "Slave", "Version", });
-          internal_static_mesos_internal_ReregisterSlaveMessage_descriptor =
-            getDescriptor().getMessageTypes().get(27);
-          internal_static_mesos_internal_ReregisterSlaveMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ReregisterSlaveMessage_descriptor,
-              new java.lang.String[] { "SlaveId", "Slave", "ExecutorInfos", "Tasks", "CompletedFrameworks", "Version", });
-          internal_static_mesos_internal_SlaveRegisteredMessage_descriptor =
-            getDescriptor().getMessageTypes().get(28);
-          internal_static_mesos_internal_SlaveRegisteredMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_SlaveRegisteredMessage_descriptor,
-              new java.lang.String[] { "SlaveId", });
-          internal_static_mesos_internal_SlaveReregisteredMessage_descriptor =
-            getDescriptor().getMessageTypes().get(29);
-          internal_static_mesos_internal_SlaveReregisteredMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_SlaveReregisteredMessage_descriptor,
-              new java.lang.String[] { "SlaveId", "Reconciliations", });
-          internal_static_mesos_internal_UnregisterSlaveMessage_descriptor =
-            getDescriptor().getMessageTypes().get(30);
-          internal_static_mesos_internal_UnregisterSlaveMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_UnregisterSlaveMessage_descriptor,
-              new java.lang.String[] { "SlaveId", });
-          internal_static_mesos_internal_PingSlaveMessage_descriptor =
-            getDescriptor().getMessageTypes().get(31);
-          internal_static_mesos_internal_PingSlaveMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_PingSlaveMessage_descriptor,
-              new java.lang.String[] { "Connected", });
-          internal_static_mesos_internal_PongSlaveMessage_descriptor =
-            getDescriptor().getMessageTypes().get(32);
-          internal_static_mesos_internal_PongSlaveMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_PongSlaveMessage_descriptor,
-              new java.lang.String[] { });
-          internal_static_mesos_internal_ShutdownFrameworkMessage_descriptor =
-            getDescriptor().getMessageTypes().get(33);
-          internal_static_mesos_internal_ShutdownFrameworkMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ShutdownFrameworkMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", });
-          internal_static_mesos_internal_ShutdownExecutorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(34);
-          internal_static_mesos_internal_ShutdownExecutorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ShutdownExecutorMessage_descriptor,
-              new java.lang.String[] { });
-          internal_static_mesos_internal_UpdateFrameworkMessage_descriptor =
-            getDescriptor().getMessageTypes().get(35);
-          internal_static_mesos_internal_UpdateFrameworkMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_UpdateFrameworkMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "Pid", });
-          internal_static_mesos_internal_RegisterExecutorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(36);
-          internal_static_mesos_internal_RegisterExecutorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_RegisterExecutorMessage_descriptor,
-              new java.lang.String[] { "FrameworkId", "ExecutorId", });
-          internal_static_mesos_internal_ExecutorRegisteredMessage_descriptor =
-            getDescriptor().getMessageTypes().get(37);
-          internal_static_mesos_internal_ExecutorRegisteredMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ExecutorRegisteredMessage_descriptor,
-              new java.lang.String[] { "ExecutorInfo", "FrameworkId", "FrameworkInfo", "SlaveId", "SlaveInfo", });
-          internal_static_mesos_internal_ExecutorReregisteredMessage_descriptor =
-            getDescriptor().getMessageTypes().get(38);
-          internal_static_mesos_internal_ExecutorReregisteredMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ExecutorReregisteredMessage_descriptor,
-              new java.lang.String[] { "SlaveId", "SlaveInfo", });
-          internal_static_mesos_internal_ExitedExecutorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(39);
-          internal_static_mesos_internal_ExitedExecutorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ExitedExecutorMessage_descriptor,
-              new java.lang.String[] { "SlaveId", "FrameworkId", "ExecutorId", "Status", });
-          internal_static_mesos_internal_ReconnectExecutorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(40);
-          internal_static_mesos_internal_ReconnectExecutorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ReconnectExecutorMessage_descriptor,
-              new java.lang.String[] { "SlaveId", });
-          internal_static_mesos_internal_ReregisterExecutorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(41);
-          internal_static_mesos_internal_ReregisterExecutorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ReregisterExecutorMessage_descriptor,
-              new java.lang.String[] { "ExecutorId", "FrameworkId", "Tasks", "Updates", });
-          internal_static_mesos_internal_ShutdownMessage_descriptor =
-            getDescriptor().getMessageTypes().get(42);
-          internal_static_mesos_internal_ShutdownMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_ShutdownMessage_descriptor,
-              new java.lang.String[] { "Message", });
-          internal_static_mesos_internal_AuthenticateMessage_descriptor =
-            getDescriptor().getMessageTypes().get(43);
-          internal_static_mesos_internal_AuthenticateMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_AuthenticateMessage_descriptor,
-              new java.lang.String[] { "Pid", });
-          internal_static_mesos_internal_AuthenticationMechanismsMessage_descriptor =
-            getDescriptor().getMessageTypes().get(44);
-          internal_static_mesos_internal_AuthenticationMechanismsMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_AuthenticationMechanismsMessage_descriptor,
-              new java.lang.String[] { "Mechanisms", });
-          internal_static_mesos_internal_AuthenticationStartMessage_descriptor =
-            getDescriptor().getMessageTypes().get(45);
-          internal_static_mesos_internal_AuthenticationStartMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_AuthenticationStartMessage_descriptor,
-              new java.lang.String[] { "Mechanism", "Data", });
-          internal_static_mesos_internal_AuthenticationStepMessage_descriptor =
-            getDescriptor().getMessageTypes().get(46);
-          internal_static_mesos_internal_AuthenticationStepMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_AuthenticationStepMessage_descriptor,
-              new java.lang.String[] { "Data", });
-          internal_static_mesos_internal_AuthenticationCompletedMessage_descriptor =
-            getDescriptor().getMessageTypes().get(47);
-          internal_static_mesos_internal_AuthenticationCompletedMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_AuthenticationCompletedMessage_descriptor,
-              new java.lang.String[] { });
-          internal_static_mesos_internal_AuthenticationFailedMessage_descriptor =
-            getDescriptor().getMessageTypes().get(48);
-          internal_static_mesos_internal_AuthenticationFailedMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_AuthenticationFailedMessage_descriptor,
-              new java.lang.String[] { });
-          internal_static_mesos_internal_AuthenticationErrorMessage_descriptor =
-            getDescriptor().getMessageTypes().get(49);
-          internal_static_mesos_internal_AuthenticationErrorMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_AuthenticationErrorMessage_descriptor,
-              new java.lang.String[] { "Error", });
-          internal_static_mesos_internal_Archive_descriptor =
-            getDescriptor().getMessageTypes().get(50);
-          internal_static_mesos_internal_Archive_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_Archive_descriptor,
-              new java.lang.String[] { "Frameworks", });
-          internal_static_mesos_internal_Archive_Framework_descriptor =
-            internal_static_mesos_internal_Archive_descriptor.getNestedTypes().get(0);
-          internal_static_mesos_internal_Archive_Framework_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_Archive_Framework_descriptor,
-              new java.lang.String[] { "FrameworkInfo", "Pid", "Tasks", });
-          internal_static_mesos_internal_TaskHealthStatus_descriptor =
-            getDescriptor().getMessageTypes().get(51);
-          internal_static_mesos_internal_TaskHealthStatus_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_TaskHealthStatus_descriptor,
-              new java.lang.String[] { "TaskId", "Healthy", "KillTask", "ConsecutiveFailures", });
-          internal_static_mesos_internal_Modules_descriptor =
-            getDescriptor().getMessageTypes().get(52);
-          internal_static_mesos_internal_Modules_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_Modules_descriptor,
-              new java.lang.String[] { "Libraries", });
-          internal_static_mesos_internal_Modules_Library_descriptor =
-            internal_static_mesos_internal_Modules_descriptor.getNestedTypes().get(0);
-          internal_static_mesos_internal_Modules_Library_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_Modules_Library_descriptor,
-              new java.lang.String[] { "File", "Name", "Modules", });
-          internal_static_mesos_internal_Modules_Library_Module_descriptor =
-            internal_static_mesos_internal_Modules_Library_descriptor.getNestedTypes().get(0);
-          internal_static_mesos_internal_Modules_Library_Module_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_mesos_internal_Modules_Library_Module_descriptor,
-              new java.lang.String[] { "Name", "Parameters", });
-          return null;
-        }
-      };
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           org.apache.mesos.Protos.getDescriptor(),
         }, assigner);
+    internal_static_mesos_internal_Task_descriptor =
+      getDescriptor().getMessageTypes().get(0);
+    internal_static_mesos_internal_Task_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_Task_descriptor,
+        new java.lang.String[] { "Name", "TaskId", "FrameworkId", "ExecutorId", "SlaveId", "State", "Resources", "Statuses", "StatusUpdateState", "StatusUpdateUuid", });
+    internal_static_mesos_internal_RoleInfo_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_mesos_internal_RoleInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_RoleInfo_descriptor,
+        new java.lang.String[] { "Name", "Weight", });
+    internal_static_mesos_internal_StatusUpdate_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_mesos_internal_StatusUpdate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_StatusUpdate_descriptor,
+        new java.lang.String[] { "FrameworkId", "ExecutorId", "SlaveId", "Status", "Timestamp", "Uuid", "LatestState", });
+    internal_static_mesos_internal_StatusUpdateRecord_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_mesos_internal_StatusUpdateRecord_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_StatusUpdateRecord_descriptor,
+        new java.lang.String[] { "Type", "Update", "Uuid", });
+    internal_static_mesos_internal_SubmitSchedulerRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_mesos_internal_SubmitSchedulerRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_SubmitSchedulerRequest_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_mesos_internal_SubmitSchedulerResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_mesos_internal_SubmitSchedulerResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_SubmitSchedulerResponse_descriptor,
+        new java.lang.String[] { "Okay", });
+    internal_static_mesos_internal_ExecutorToFrameworkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_mesos_internal_ExecutorToFrameworkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ExecutorToFrameworkMessage_descriptor,
+        new java.lang.String[] { "SlaveId", "FrameworkId", "ExecutorId", "Data", });
+    internal_static_mesos_internal_FrameworkToExecutorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_mesos_internal_FrameworkToExecutorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_FrameworkToExecutorMessage_descriptor,
+        new java.lang.String[] { "SlaveId", "FrameworkId", "ExecutorId", "Data", });
+    internal_static_mesos_internal_RegisterFrameworkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_mesos_internal_RegisterFrameworkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_RegisterFrameworkMessage_descriptor,
+        new java.lang.String[] { "Framework", });
+    internal_static_mesos_internal_ReregisterFrameworkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_mesos_internal_ReregisterFrameworkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ReregisterFrameworkMessage_descriptor,
+        new java.lang.String[] { "Framework", "Failover", });
+    internal_static_mesos_internal_FrameworkRegisteredMessage_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_mesos_internal_FrameworkRegisteredMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_FrameworkRegisteredMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "MasterInfo", });
+    internal_static_mesos_internal_FrameworkReregisteredMessage_descriptor =
+      getDescriptor().getMessageTypes().get(11);
+    internal_static_mesos_internal_FrameworkReregisteredMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_FrameworkReregisteredMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "MasterInfo", });
+    internal_static_mesos_internal_UnregisterFrameworkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(12);
+    internal_static_mesos_internal_UnregisterFrameworkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_UnregisterFrameworkMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", });
+    internal_static_mesos_internal_DeactivateFrameworkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_mesos_internal_DeactivateFrameworkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_DeactivateFrameworkMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", });
+    internal_static_mesos_internal_ResourceRequestMessage_descriptor =
+      getDescriptor().getMessageTypes().get(14);
+    internal_static_mesos_internal_ResourceRequestMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ResourceRequestMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "Requests", });
+    internal_static_mesos_internal_ResourceOffersMessage_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_mesos_internal_ResourceOffersMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ResourceOffersMessage_descriptor,
+        new java.lang.String[] { "Offers", "Pids", });
+    internal_static_mesos_internal_LaunchTasksMessage_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_mesos_internal_LaunchTasksMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_LaunchTasksMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "Tasks", "Filters", "OfferIds", });
+    internal_static_mesos_internal_RescindResourceOfferMessage_descriptor =
+      getDescriptor().getMessageTypes().get(17);
+    internal_static_mesos_internal_RescindResourceOfferMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_RescindResourceOfferMessage_descriptor,
+        new java.lang.String[] { "OfferId", });
+    internal_static_mesos_internal_ReviveOffersMessage_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_mesos_internal_ReviveOffersMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ReviveOffersMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", });
+    internal_static_mesos_internal_RunTaskMessage_descriptor =
+      getDescriptor().getMessageTypes().get(19);
+    internal_static_mesos_internal_RunTaskMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_RunTaskMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "Framework", "Pid", "Task", });
+    internal_static_mesos_internal_KillTaskMessage_descriptor =
+      getDescriptor().getMessageTypes().get(20);
+    internal_static_mesos_internal_KillTaskMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_KillTaskMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "TaskId", });
+    internal_static_mesos_internal_StatusUpdateMessage_descriptor =
+      getDescriptor().getMessageTypes().get(21);
+    internal_static_mesos_internal_StatusUpdateMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_StatusUpdateMessage_descriptor,
+        new java.lang.String[] { "Update", "Pid", });
+    internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_descriptor =
+      getDescriptor().getMessageTypes().get(22);
+    internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_StatusUpdateAcknowledgementMessage_descriptor,
+        new java.lang.String[] { "SlaveId", "FrameworkId", "TaskId", "Uuid", });
+    internal_static_mesos_internal_LostSlaveMessage_descriptor =
+      getDescriptor().getMessageTypes().get(23);
+    internal_static_mesos_internal_LostSlaveMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_LostSlaveMessage_descriptor,
+        new java.lang.String[] { "SlaveId", });
+    internal_static_mesos_internal_ReconcileTasksMessage_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_mesos_internal_ReconcileTasksMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ReconcileTasksMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "Statuses", });
+    internal_static_mesos_internal_FrameworkErrorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_mesos_internal_FrameworkErrorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_FrameworkErrorMessage_descriptor,
+        new java.lang.String[] { "Message", });
+    internal_static_mesos_internal_RegisterSlaveMessage_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_mesos_internal_RegisterSlaveMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_RegisterSlaveMessage_descriptor,
+        new java.lang.String[] { "Slave", "Version", });
+    internal_static_mesos_internal_ReregisterSlaveMessage_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_mesos_internal_ReregisterSlaveMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ReregisterSlaveMessage_descriptor,
+        new java.lang.String[] { "SlaveId", "Slave", "ExecutorInfos", "Tasks", "CompletedFrameworks", "Version", });
+    internal_static_mesos_internal_SlaveRegisteredMessage_descriptor =
+      getDescriptor().getMessageTypes().get(28);
+    internal_static_mesos_internal_SlaveRegisteredMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_SlaveRegisteredMessage_descriptor,
+        new java.lang.String[] { "SlaveId", });
+    internal_static_mesos_internal_SlaveReregisteredMessage_descriptor =
+      getDescriptor().getMessageTypes().get(29);
+    internal_static_mesos_internal_SlaveReregisteredMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_SlaveReregisteredMessage_descriptor,
+        new java.lang.String[] { "SlaveId", "Reconciliations", });
+    internal_static_mesos_internal_UnregisterSlaveMessage_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_mesos_internal_UnregisterSlaveMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_UnregisterSlaveMessage_descriptor,
+        new java.lang.String[] { "SlaveId", });
+    internal_static_mesos_internal_PingSlaveMessage_descriptor =
+      getDescriptor().getMessageTypes().get(31);
+    internal_static_mesos_internal_PingSlaveMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_PingSlaveMessage_descriptor,
+        new java.lang.String[] { "Connected", });
+    internal_static_mesos_internal_PongSlaveMessage_descriptor =
+      getDescriptor().getMessageTypes().get(32);
+    internal_static_mesos_internal_PongSlaveMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_PongSlaveMessage_descriptor,
+        new java.lang.String[] { });
+    internal_static_mesos_internal_ShutdownFrameworkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(33);
+    internal_static_mesos_internal_ShutdownFrameworkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ShutdownFrameworkMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", });
+    internal_static_mesos_internal_ShutdownExecutorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(34);
+    internal_static_mesos_internal_ShutdownExecutorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ShutdownExecutorMessage_descriptor,
+        new java.lang.String[] { });
+    internal_static_mesos_internal_UpdateFrameworkMessage_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_mesos_internal_UpdateFrameworkMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_UpdateFrameworkMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "Pid", });
+    internal_static_mesos_internal_RegisterExecutorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_mesos_internal_RegisterExecutorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_RegisterExecutorMessage_descriptor,
+        new java.lang.String[] { "FrameworkId", "ExecutorId", });
+    internal_static_mesos_internal_ExecutorRegisteredMessage_descriptor =
+      getDescriptor().getMessageTypes().get(37);
+    internal_static_mesos_internal_ExecutorRegisteredMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ExecutorRegisteredMessage_descriptor,
+        new java.lang.String[] { "ExecutorInfo", "FrameworkId", "FrameworkInfo", "SlaveId", "SlaveInfo", });
+    internal_static_mesos_internal_ExecutorReregisteredMessage_descriptor =
+      getDescriptor().getMessageTypes().get(38);
+    internal_static_mesos_internal_ExecutorReregisteredMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ExecutorReregisteredMessage_descriptor,
+        new java.lang.String[] { "SlaveId", "SlaveInfo", });
+    internal_static_mesos_internal_ExitedExecutorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(39);
+    internal_static_mesos_internal_ExitedExecutorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ExitedExecutorMessage_descriptor,
+        new java.lang.String[] { "SlaveId", "FrameworkId", "ExecutorId", "Status", });
+    internal_static_mesos_internal_ReconnectExecutorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(40);
+    internal_static_mesos_internal_ReconnectExecutorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ReconnectExecutorMessage_descriptor,
+        new java.lang.String[] { "SlaveId", });
+    internal_static_mesos_internal_ReregisterExecutorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(41);
+    internal_static_mesos_internal_ReregisterExecutorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ReregisterExecutorMessage_descriptor,
+        new java.lang.String[] { "ExecutorId", "FrameworkId", "Tasks", "Updates", });
+    internal_static_mesos_internal_ShutdownMessage_descriptor =
+      getDescriptor().getMessageTypes().get(42);
+    internal_static_mesos_internal_ShutdownMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_ShutdownMessage_descriptor,
+        new java.lang.String[] { "Message", });
+    internal_static_mesos_internal_AuthenticateMessage_descriptor =
+      getDescriptor().getMessageTypes().get(43);
+    internal_static_mesos_internal_AuthenticateMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_AuthenticateMessage_descriptor,
+        new java.lang.String[] { "Pid", });
+    internal_static_mesos_internal_AuthenticationMechanismsMessage_descriptor =
+      getDescriptor().getMessageTypes().get(44);
+    internal_static_mesos_internal_AuthenticationMechanismsMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_AuthenticationMechanismsMessage_descriptor,
+        new java.lang.String[] { "Mechanisms", });
+    internal_static_mesos_internal_AuthenticationStartMessage_descriptor =
+      getDescriptor().getMessageTypes().get(45);
+    internal_static_mesos_internal_AuthenticationStartMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_AuthenticationStartMessage_descriptor,
+        new java.lang.String[] { "Mechanism", "Data", });
+    internal_static_mesos_internal_AuthenticationStepMessage_descriptor =
+      getDescriptor().getMessageTypes().get(46);
+    internal_static_mesos_internal_AuthenticationStepMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_AuthenticationStepMessage_descriptor,
+        new java.lang.String[] { "Data", });
+    internal_static_mesos_internal_AuthenticationCompletedMessage_descriptor =
+      getDescriptor().getMessageTypes().get(47);
+    internal_static_mesos_internal_AuthenticationCompletedMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_AuthenticationCompletedMessage_descriptor,
+        new java.lang.String[] { });
+    internal_static_mesos_internal_AuthenticationFailedMessage_descriptor =
+      getDescriptor().getMessageTypes().get(48);
+    internal_static_mesos_internal_AuthenticationFailedMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_AuthenticationFailedMessage_descriptor,
+        new java.lang.String[] { });
+    internal_static_mesos_internal_AuthenticationErrorMessage_descriptor =
+      getDescriptor().getMessageTypes().get(49);
+    internal_static_mesos_internal_AuthenticationErrorMessage_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_AuthenticationErrorMessage_descriptor,
+        new java.lang.String[] { "Error", });
+    internal_static_mesos_internal_Archive_descriptor =
+      getDescriptor().getMessageTypes().get(50);
+    internal_static_mesos_internal_Archive_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_Archive_descriptor,
+        new java.lang.String[] { "Frameworks", });
+    internal_static_mesos_internal_Archive_Framework_descriptor =
+      internal_static_mesos_internal_Archive_descriptor.getNestedTypes().get(0);
+    internal_static_mesos_internal_Archive_Framework_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_Archive_Framework_descriptor,
+        new java.lang.String[] { "FrameworkInfo", "Pid", "Tasks", });
+    internal_static_mesos_internal_TaskHealthStatus_descriptor =
+      getDescriptor().getMessageTypes().get(51);
+    internal_static_mesos_internal_TaskHealthStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_TaskHealthStatus_descriptor,
+        new java.lang.String[] { "TaskId", "Healthy", "KillTask", "ConsecutiveFailures", });
+    internal_static_mesos_internal_Modules_descriptor =
+      getDescriptor().getMessageTypes().get(52);
+    internal_static_mesos_internal_Modules_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_Modules_descriptor,
+        new java.lang.String[] { "Libraries", });
+    internal_static_mesos_internal_Modules_Library_descriptor =
+      internal_static_mesos_internal_Modules_descriptor.getNestedTypes().get(0);
+    internal_static_mesos_internal_Modules_Library_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_Modules_Library_descriptor,
+        new java.lang.String[] { "File", "Name", "Modules", });
+    internal_static_mesos_internal_Modules_Library_Module_descriptor =
+      internal_static_mesos_internal_Modules_Library_descriptor.getNestedTypes().get(0);
+    internal_static_mesos_internal_Modules_Library_Module_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_mesos_internal_Modules_Library_Module_descriptor,
+        new java.lang.String[] { "Name", "Parameters", });
+    org.apache.mesos.Protos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

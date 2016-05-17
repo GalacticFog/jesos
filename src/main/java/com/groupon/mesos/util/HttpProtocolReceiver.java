@@ -33,6 +33,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
+//import java.nio.charset.StandardCharsets;
 import java.util.Set;
 import java.util.concurrent.ConcurrentMap;
 
@@ -48,6 +49,7 @@ import io.undertow.server.handlers.CanonicalPathHandler;
 import io.undertow.server.handlers.GracefulShutdownHandler;
 import io.undertow.server.handlers.PathHandler;
 import mesos.internal.Messages;
+//import org.apache.commons.io.IOUtils;
 
 /**
  * Receives messages from the Mesos cluster. A message is a Protobuf formatted byte stream sent over http. Every
@@ -114,6 +116,13 @@ public class HttpProtocolReceiver
         httpServer.start();
     }
 
+    /*
+    static String convertStreamToString(InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is, "UTF8").useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
+    }
+    */
+
     @Override
     public void handleRequest(final HttpServerExchange exchange) throws Exception
     {
@@ -132,6 +141,10 @@ public class HttpProtocolReceiver
 
         final int dotIndex = exchange.getRelativePath().lastIndexOf('.');
         final String name = exchange.getRelativePath().substring(dotIndex + 1);
+
+        LOG.debug( "request name : " + name );
+        System.out.println( "request name : " + name );
+
         exchange.setResponseCode(202);
 
         // This is where it gets ugly. Protobuf and dynamic messages don't really mesh.
@@ -170,6 +183,12 @@ public class HttpProtocolReceiver
         }
 
         try {
+
+            //String out = convertStreamToString( exchange.etInputStream() );
+            //String out = IOUtils.toString(exchange.getInputStream(), StandardCharsets.UTF_8);
+            //LOG.debug( "exchange input stream : " + out );
+            //System.out.println("exchange input stream : " + out);
+
             final Object o = parseFromMethod.invoke(null, exchange.getInputStream(), extensionRegistry);
             // Local delivery of the message.
             eventBus.post(envelopeConstructor.newInstance(sender, localAddress, o));

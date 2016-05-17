@@ -24,7 +24,7 @@
     <groupId>com.groupon.mesos</groupId>
     <artifactId>jesos</artifactId>
     <packaging>jar</packaging>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.5.3-SNAPSHOT</version>
 
     <scm>
         <connection>scm:git:git://github.com/groupon/jesos.git</connection>
@@ -71,6 +71,7 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.apache.mesos</groupId>
             <artifactId>mesos</artifactId>

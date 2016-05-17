@@ -187,7 +187,7 @@ message ReviveOffersMessage {
 
 
 message RunTaskMessage {
-  required FrameworkID framework_id = 1;
+  optional FrameworkID framework_id = 1;
   required FrameworkInfo framework = 2;
   required string pid = 3;
   required TaskInfo task = 4;
