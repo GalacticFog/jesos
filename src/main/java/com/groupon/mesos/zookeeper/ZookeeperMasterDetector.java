@@ -19,6 +19,7 @@ import static com.google.common.base.Preconditions.checkState;
 import java.io.Closeable;
 import java.io.IOException;
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -27,6 +28,10 @@ import java.util.TreeMap;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.atomic.AtomicBoolean;
+
+import org.apache.mesos.Protos;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.JSONObject;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Predicates;
@@ -38,7 +43,7 @@ import com.google.common.collect.Sets;
 import com.google.common.eventbus.Subscribe;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
-import com.google.protobuf.InvalidProtocolBufferException;
+//import com.google.protobuf.InvalidProtocolBufferException;
 import com.groupon.mesos.util.Log;
 import com.groupon.mesos.util.ManagedEventBus;
 import com.groupon.mesos.util.UPID;
@@ -203,7 +208,7 @@ public class ZookeeperMasterDetector
 
     private void processChildList(final List<String> children)
     {
-        final Set<String> masterNodes = ImmutableSet.copyOf(Iterables.filter(children, Predicates.containsPattern("^info_")));
+        final Set<String> masterNodes = ImmutableSet.copyOf(Iterables.filter(children, Predicates.containsPattern("^json.info_")));
         eventBus.post(new MasterUpdateMessage(masterNodes));
     }
 
@@ -226,14 +231,48 @@ public class ZookeeperMasterDetector
         }
 
         @Override
-        public Object deserialize(final byte[] bytes) throws ZkMarshallingError
+        public Object deserialize(final byte[] bytes)// throws ZkMarshallingError
         {
             checkNotNull(bytes, "bytes is null");
             try {
-                return MasterInfo.parseFrom(bytes);
+                String debug = new String( bytes, StandardCharsets.UTF_8 );
+                LOG.debug( "DEBUG PROTO : " + debug );
+                JSONParser parser = new JSONParser();
+                JSONObject obj = (JSONObject)parser.parse( debug );
+
+                JSONObject address = (JSONObject)obj.get("address");
+                String hostname = (String)obj.get("hostname");
+                String id = (String)obj.get("id");
+                Long ip = (Long)obj.get("ip");
+                String pid = (String)obj.get("pid");
+                int port = ((Long)obj.get("port")).intValue();
+                String version = (String)obj.get("version");
+
+                String add_host = (String)address.get("hostname");
+                String add_ip = (String)address.get("ip");
+                int add_port = ((Long)address.get("port")).intValue();
+
+                Protos.Address.Builder addy = Protos.Address.newBuilder();
+                addy.setHostname( add_host );
+                addy.setIp( add_ip );
+                addy.setPort( add_port );
+
+                MasterInfo.Builder mi = MasterInfo.newBuilder();
+                mi.setAddress( addy.build() );
+                mi.setHostname( hostname );
+                mi.setIp( ip.intValue() );
+                mi.setPid( pid );
+                mi.setId( id );
+                mi.setPort( port );
+                mi.setVersion( version );
+
+                return mi.build();
             }
-            catch (final InvalidProtocolBufferException e) {
-                return new ZkMarshallingError(e);
+            catch (final Exception e) {
+                e.printStackTrace();
+                LOG.error( "Error : " + e.getMessage() );
+                //return new ZkMarshallingError(e);
+                return null;
             }
         }
     }

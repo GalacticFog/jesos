@@ -551,6 +551,18 @@ public abstract class InternalSchedulerDriver
     }
 
     @Override
+    public Status acceptOffers( final Collection<OfferID> offers, Collection<Protos.Offer.Operation> ops, Filters filters )
+    {
+        return context.getStateMachine();
+    }
+
+    @Override
+    public Status suppressOffers()
+    {
+        return context.getStateMachine();
+    }
+
+    @Override
     public Status acknowledgeStatusUpdate(final TaskStatus taskStatus)
     {
         checkNotNull(taskStatus, "taskStatus is null");
