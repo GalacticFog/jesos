@@ -142,9 +142,6 @@ public class HttpProtocolReceiver
         final int dotIndex = exchange.getRelativePath().lastIndexOf('.');
         final String name = exchange.getRelativePath().substring(dotIndex + 1);
 
-        LOG.debug( "request name : " + name );
-        System.out.println( "request name : " + name );
-
         exchange.setResponseCode(202);
 
         // This is where it gets ugly. Protobuf and dynamic messages don't really mesh.
@@ -183,11 +180,6 @@ public class HttpProtocolReceiver
         }
 
         try {
-
-            //String out = convertStreamToString( exchange.etInputStream() );
-            //String out = IOUtils.toString(exchange.getInputStream(), StandardCharsets.UTF_8);
-            //LOG.debug( "exchange input stream : " + out );
-            //System.out.println("exchange input stream : " + out);
 
             final Object o = parseFromMethod.invoke(null, exchange.getInputStream(), extensionRegistry);
             // Local delivery of the message.
